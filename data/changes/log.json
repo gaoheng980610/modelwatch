@@ -1,9 +1,9 @@
 {
   "meta": {
-    "entries": 4,
+    "entries": 5,
     "first": "2026-10-08",
-    "latest": "2026-10-08T0944Z",
-    "total_changes": 8
+    "latest": "2026-10-08T0947Z",
+    "total_changes": 16
   },
   "entries": [
     {
@@ -82,6 +82,62 @@
           "type": "price_output",
           "from": 0.482013,
           "to": 0.433811
+        }
+      ]
+    },
+    {
+      "from": "2026-10-08T0944Z",
+      "to": "2026-10-08T0947Z",
+      "detected_at": "2026-10-08T09:47:18Z",
+      "count": 8,
+      "changes": [
+        {
+          "model": "deepseek-v4-flash",
+          "type": "price_input",
+          "from": 0.0173,
+          "to": 0.0131
+        },
+        {
+          "model": "deepseek-v4-flash",
+          "type": "price_cached_input",
+          "from": 0.0173,
+          "to": 0.0131
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "type": "price_input",
+          "from": 0.0137,
+          "to": 0.0104
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "type": "price_cached_input",
+          "from": 0.0137,
+          "to": 0.0104
+        },
+        {
+          "model": "deepseek-v4-flash-latest",
+          "type": "price_input",
+          "from": 0.01096,
+          "to": 0.0104
+        },
+        {
+          "model": "deepseek-v4-flash-latest",
+          "type": "price_output",
+          "from": 0.433811,
+          "to": 1.28
+        },
+        {
+          "model": "deepseek-v4-flash-latest",
+          "type": "price_cached_input",
+          "from": 0.01096,
+          "to": 0.0104
+        },
+        {
+          "model": "kimi-latest",
+          "type": "price_input",
+          "from": 0.52,
+          "to": 0.45
         }
       ]
     }
