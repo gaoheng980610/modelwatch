@@ -136,7 +136,11 @@ def main() -> int:
     text = json.dumps(payload, indent=2, ensure_ascii=False)
     MODELS.write_text(text, encoding="utf-8")
     HISTORY.mkdir(exist_ok=True)
-    snapshot = HISTORY / f"{retrieved_at[:10]}.json"
+    # Timestamped to the minute, not just the date. Upstream data is live: two
+    # runs 26 minutes apart moved 10 input prices. A date-only filename made the
+    # second run silently OVERWRITE the first, so those changes were dropped
+    # before the log could see them.
+    snapshot = HISTORY / f"{retrieved_at[:10]}T{retrieved_at[11:16].replace(':', '')}Z.json"
     snapshot.write_text(text, encoding="utf-8")
 
     # Append the diff against the previous snapshot to the append-only change log.

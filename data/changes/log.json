@@ -1,0 +1,36 @@
+{
+  "meta": {
+    "entries": 1,
+    "first": "2026-10-08",
+    "latest": "2026-10-08T0931Z",
+    "total_changes": 3
+  },
+  "entries": [
+    {
+      "from": "2026-10-08",
+      "to": "2026-10-08T0931Z",
+      "detected_at": "2026-10-08T09:31:55Z",
+      "count": 3,
+      "changes": [
+        {
+          "model": "deepseek-v4-flash-latest",
+          "type": "price_input",
+          "from": 0.0137,
+          "to": 0.01096
+        },
+        {
+          "model": "deepseek-v4-flash-latest",
+          "type": "price_output",
+          "from": 1.28,
+          "to": 0.482013
+        },
+        {
+          "model": "deepseek-v4-flash-latest",
+          "type": "price_cached_input",
+          "from": 0.0137,
+          "to": 0.01096
+        }
+      ]
+    }
+  ]
+}
