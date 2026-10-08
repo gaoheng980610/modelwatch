@@ -15,11 +15,13 @@ from __future__ import annotations
 import html
 import json
 import os
+import re
 import shutil
 import sys
 from collections import Counter
 from datetime import date, timedelta
 from pathlib import Path
+from urllib.parse import urlsplit
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import monitor  # noqa: E402
@@ -33,6 +35,18 @@ CHANGE_LOG = ROOT / "data" / "changes" / "log.json"
 # The public origin. Set MODELWATCH_BASE_URL at deploy time so going live is a
 # config change, not a code edit (it drives canonical URLs, og tags and the sitemap).
 BASE_URL = os.environ.get("MODELWATCH_BASE_URL", "https://modelwatch.example").rstrip("/")
+
+# A project page (e.g. <user>.github.io/<repo>/) is served from a sub-path, where
+# a root-absolute "/assets/style.css" resolves to the wrong place. Rather than
+# teach 40-odd call sites about it, the prefix is derived here and applied once,
+# to the finished HTML, in page().
+BASE_PATH = urlsplit(BASE_URL).path.rstrip("/")
+
+_INTERNAL_URL = re.compile(r'((?:href|src)=")/')
+
+
+def _prefixed(document: str) -> str:
+    return _INTERNAL_URL.sub(r"\1" + BASE_PATH + "/", document) if BASE_PATH else document
 
 BUILD_DATE = date.today().isoformat()
 
@@ -383,7 +397,7 @@ INDEX_SCRIPT = """(function(){
 })();"""
 
 COMPARE_SCRIPT = """(function(){
-  var CAPS=__CAPS__;
+  var CAPS=__CAPS__,P="__PREFIX__";
   var a=document.getElementById('ca'),b=document.getElementById('cb'),
       go=document.getElementById('cgo'),out=document.getElementById('out'),cache=null;
   function fmt(v){
@@ -410,7 +424,7 @@ COMPARE_SCRIPT = """(function(){
       '<td class="num'+(yw?' win':(comparable?' dim':''))+'">'+esc(f(y))+'</td></tr>';
   }
   function load(){
-    return cache?Promise.resolve(cache):fetch('/api/v1/models.json')
+    return cache?Promise.resolve(cache):fetch(P+'/api/v1/models.json')
       .then(function(r){return r.json();}).then(function(d){cache=d.models;return cache;});
   }
   function byId(ms,id){for(var i=0;i<ms.length;i++){if(ms[i].id===id)return ms[i];}return null;}
@@ -495,7 +509,7 @@ def page(title: str, description: str, body: str, path: str, *, noindex: bool = 
         nav_item("/report.html", "Report", "report.html"),
         nav_item("/docs.html", "Docs", "docs.html"),
     ])
-    return f"""<!doctype html>
+    document = f"""<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -542,6 +556,7 @@ def page(title: str, description: str, body: str, path: str, *, noindex: bool = 
 </body>
 </html>
 """
+    return _prefixed(document)
 
 
 # ---------------------------------------------------------------- components
@@ -1095,7 +1110,8 @@ def comparisons_by_model(models: list[dict]) -> dict[str, list[tuple[dict, dict]
 def build_compare_index(models: list[dict]) -> str:
     # Inject the capability label map so the browser prints "Code execution",
     # not "code_execution" — the same labels the server-rendered pages use.
-    script = COMPARE_SCRIPT.replace("__CAPS__", json.dumps(CAP_LABELS))
+    script = (COMPARE_SCRIPT.replace("__CAPS__", json.dumps(CAP_LABELS))
+                           .replace("__PREFIX__", BASE_PATH))
     options = "".join(
         f'<option value="{esc(m["id"])}">{esc(m["display_name"])} — {esc(provider_name(m["provider"]))}</option>'
         for m in sorted(models, key=lambda x: x["display_name"].lower()))

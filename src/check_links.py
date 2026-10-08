@@ -21,6 +21,9 @@ from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / "site"
 BASE_URL = os.environ.get("MODELWATCH_BASE_URL", "https://modelwatch.example").rstrip("/")
+# Mirrors build_site: on a project page every internal link carries the repo's
+# sub-path, so it must be stripped before mapping the URL onto a file.
+BASE_PATH = urlsplit(BASE_URL).path.rstrip("/")
 
 ATTR = re.compile(r'(?:href|src)="([^"]+)"')
 LOC = re.compile(r"<loc>([^<]+)</loc>")
@@ -38,6 +41,8 @@ def resolve(base_dir: Path, url: str) -> Path | None:
     path = urlsplit(url).path
     if not path:
         return None
+    if path.startswith("/") and BASE_PATH and path.startswith(BASE_PATH + "/"):
+        path = path[len(BASE_PATH):]
     target = SITE / path.lstrip("/") if path.startswith("/") else (base_dir / path)
     if target.is_dir():
         target = target / "index.html"

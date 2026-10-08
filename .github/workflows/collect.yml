@@ -1,8 +1,10 @@
 name: collect
 
-# Daily data refresh: collect -> validate -> build -> commit the snapshot.
-# This is the compounding loop; it starts running the moment this repo exists
-# (human-identity gate G0) — no other setup needed.
+# Daily data refresh, and a publish on every change:
+#   collect -> test -> validate -> audit -> build -> check links -> check claims
+#   -> commit the data snapshot -> deploy the site to GitHub Pages
+#
+# Starts running the moment this repo exists. No other setup needed.
 on:
   schedule:
     - cron: "17 6 * * *"   # 06:17 UTC daily (off the :00 mark on purpose)
@@ -15,13 +17,22 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+env:
+  # The site is served from a sub-path on a project page, so every internal link
+  # needs this prefix. It drives canonical URLs, og tags, the sitemap and the
+  # in-page JS. Change it (and that is all) to move to a custom domain.
+  MODELWATCH_BASE_URL: https://gaoheng980610.github.io/modelwatch
 
 jobs:
   collect:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: .
     steps:
       - uses: actions/checkout@v4
 
@@ -63,9 +74,22 @@ jobs:
             git commit -m "chore(data): snapshot $(date -u +%F)"
           git push
 
-      - name: Upload site artifact
-        uses: actions/upload-artifact@v4
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
         with:
-          name: site
-          path: site/
-          retention-days: 14
+          enablement: true      # turn Pages on if it is not already
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: collect
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
