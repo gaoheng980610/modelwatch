@@ -20,3 +20,8 @@ BASE_URL = (os.environ.get("MODELWATCH_BASE_URL", "").strip().rstrip("/")
 
 # A project page is served from a sub-path; every root-absolute link needs it.
 BASE_PATH = urlsplit(BASE_URL).path.rstrip("/")
+
+# Cloudflare Web Analytics token. Without analytics this project is blind: we
+# cannot tell zero visitors from ten thousand, and discovery is its entire
+# remaining risk. Set as a repo variable in CI; left empty it injects nothing.
+CF_ANALYTICS = os.environ.get("MODELWATCH_CF_ANALYTICS", "").strip()

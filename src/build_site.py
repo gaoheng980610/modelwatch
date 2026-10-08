@@ -25,7 +25,7 @@ from urllib.parse import urlsplit
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import monitor  # noqa: E402
-from config import BASE_PATH, BASE_URL, CNAME  # noqa: E402
+from config import BASE_PATH, BASE_URL, CF_ANALYTICS, CNAME  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_FILE = ROOT / "data" / "models.json"
@@ -481,6 +481,19 @@ THEME_SCRIPT = """(function(){
 })();"""
 
 
+def _analytics_beacon() -> str:
+    """Cloudflare Web Analytics snippet, or nothing.
+
+    The token goes into the page as an attribute, so it is restricted to a safe
+    charset rather than trusted — a malformed value must not be able to inject
+    markup into 751 pages.
+    """
+    if not CF_ANALYTICS or not re.fullmatch(r"[A-Za-z0-9]+", CF_ANALYTICS):
+        return ""
+    return ('<script defer src="https://static.cloudflareinsights.com/beacon.min.js" '
+            "data-cf-beacon='{\"token\": \"" + CF_ANALYTICS + "\"}'></script>\n")
+
+
 def _meta_description(text: str, limit: int = 155) -> str:
     """Trim to what a search result actually displays (~155 characters).
 
@@ -560,7 +573,7 @@ def page(title: str, description: str, body: str, path: str, *, noindex: bool = 
   </div>
 </footer>
 <script>{THEME_SCRIPT}</script>
-</body>
+{_analytics_beacon()}</body>
 </html>
 """
     return _prefixed(document)
