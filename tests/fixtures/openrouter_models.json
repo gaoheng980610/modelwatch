@@ -1,0 +1,43 @@
+{
+  "data": [
+    {
+      "id": "anthropic/claude-opus-5",
+      "canonical_slug": "anthropic/claude-opus-5",
+      "name": "Anthropic: Claude Opus 5",
+      "created": 1777593600,
+      "expiration_date": null,
+      "context_length": 1000000,
+      "architecture": { "input_modalities": ["text", "image"], "output_modalities": ["text"] },
+      "supported_parameters": ["tools", "reasoning", "response_format"],
+      "reasoning": { "supported_efforts": ["low", "high"] },
+      "pricing": {
+        "prompt": "0.000005",
+        "completion": "0.000025",
+        "input_cache_read": "0.0000005",
+        "input_cache_write": "0.00000625"
+      },
+      "top_provider": { "context_length": 1000000, "max_completion_tokens": 128000 }
+    },
+    {
+      "id": "openai/gpt-6-luna-pro",
+      "name": "OpenAI: GPT-6 Luna Pro",
+      "created": 1777593600,
+      "expiration_date": null,
+      "context_length": 400000,
+      "architecture": { "input_modalities": ["text", "image"], "output_modalities": ["text"] },
+      "supported_parameters": ["tools", "reasoning"],
+      "pricing": { "prompt": "0.0000025", "completion": "0.00001" },
+      "top_provider": { "context_length": 400000, "max_completion_tokens": 64000 }
+    },
+    {
+      "id": "anthropic/claude-opus-5:batch",
+      "name": "Anthropic: Claude Opus 5 (batch)",
+      "created": 1777593600,
+      "context_length": 1000000,
+      "architecture": { "input_modalities": ["text", "image"] },
+      "supported_parameters": ["tools"],
+      "pricing": { "prompt": "0.0000025", "completion": "0.0000125" },
+      "top_provider": { "context_length": 1000000, "max_completion_tokens": 128000 }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "adapters": [
+    {
+      "id": "seed",
+      "provider": "*",
+      "kind": "file",
+      "path": "data/seed.json",
+      "parser": "modelwatch_records",
+      "source_type": "manual",
+      "enabled": true,
+      "note": "Hand-curated baseline. Always loaded first; live adapters merge on top and only override non-null fields."
+    },
+    {
+      "id": "anthropic-models-api",
+      "provider": "anthropic",
+      "kind": "api",
+      "url": "https://api.anthropic.com/v1/models",
+      "auth": {
+        "header": "x-api-key",
+        "prefix": "",
+        "env": "ANTHROPIC_API_KEY",
+        "extra_headers": { "anthropic-version": "2023-06-01" }
+      },
+      "parser": "anthropic_models_api",
+      "source_type": "vendor_api",
+      "confidence": "verified",
+      "enabled": true,
+      "note": "Official Models API. Returns id/display_name/created_at/max_input_tokens/max_tokens/capabilities. Does NOT return pricing - seed/pricing adapter fills that."
+    },
+    {
+      "id": "openrouter-models",
+      "provider": "*",
+      "kind": "api",
+      "url": "https://openrouter.ai/api/v1/models",
+      "auth": { "header": "", "prefix": "", "env": "", "extra_headers": {} },
+      "parser": "openrouter_models_api",
+      "source_type": "third_party",
+      "confidence": "partly_verified",
+      "enabled": true,
+      "note": "Public, no-key catalog aggregating ~60 vendors with per-token pricing + context. Third-party: fills providers we have no first-party source for, but can never overwrite a first-party verified figure (see merge rules)."
+    }
+  ]
+}

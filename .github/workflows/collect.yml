@@ -1,0 +1,66 @@
+name: collect
+
+# Daily data refresh: collect -> validate -> build -> commit the snapshot.
+# This is the compounding loop; it starts running the moment this repo exists
+# (human-identity gate G0) — no other setup needed.
+on:
+  schedule:
+    - cron: "17 6 * * *"   # 06:17 UTC daily (off the :00 mark on purpose)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: .
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Collect
+        env:
+          # Optional. When this secret is set, the first-party Anthropic Models
+          # API adapter starts contributing verified live data. Absent = skipped.
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python src/collector.py
+
+      - name: Validate
+        run: python src/validate.py
+
+      - name: Audit
+        run: python src/audit.py
+
+      - name: Build site
+        run: python src/build_site.py
+
+      - name: Check internal links
+        run: python src/check_links.py
+
+      - name: Check rendered figures
+        run: python src/check_claims.py
+
+      - name: Commit data snapshot
+        run: |
+          git config user.name  "modelwatch-bot"
+          git config user.email "modelwatch-bot@users.noreply.github.com"
+          git add data
+          git diff --cached --quiet && echo "no data changes" || \
+            git commit -m "chore(data): snapshot $(date -u +%F)"
+          git push
+
+      - name: Upload site artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: site/
+          retention-days: 14

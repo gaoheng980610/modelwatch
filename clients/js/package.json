@@ -1,0 +1,13 @@
+{
+  "name": "modelwatch",
+  "version": "0.1.0",
+  "description": "Client for ModelWatch - AI model capabilities, context windows and pricing, with sources.",
+  "type": "module",
+  "main": "index.js",
+  "exports": { ".": "./index.js" },
+  "files": ["index.js", "README.md"],
+  "engines": { "node": ">=18" },
+  "keywords": ["ai", "llm", "models", "pricing", "context-window", "openai", "anthropic", "gemini"],
+  "license": "MIT",
+  "repository": { "type": "git", "url": "https://github.com/CHANGE_ME/modelwatch.git" }
+}

@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "modelwatch"
+version = "0.1.0"
+description = "Client for ModelWatch - AI model capabilities, context windows and pricing, with sources."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["ai", "llm", "models", "pricing", "context-window", "openai", "anthropic", "gemini"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Topic :: Software Development :: Libraries",
+]
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/CHANGE_ME/modelwatch"
+
+[tool.setuptools]
+py-modules = ["modelwatch"]

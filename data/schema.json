@@ -1,0 +1,120 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://modelwatch.example/schema/model-v0.1.0.json",
+  "title": "ModelWatch model record",
+  "description": "One AI/LLM model's capability, pricing, limit and lifecycle facts, with provenance on every figure.",
+  "type": "object",
+  "required": ["id", "provider", "display_name", "lifecycle", "context", "pricing", "as_of", "confidence", "provenance"],
+  "additionalProperties": false,
+  "properties": {
+    "id": { "type": "string", "description": "Provider-native model identifier (e.g. claude-opus-5)." },
+    "provider": { "type": "string", "description": "Provider slug (anthropic, openai, google, ...)." },
+    "display_name": { "type": "string" },
+    "family": { "type": ["string", "null"] },
+    "released": { "type": ["string", "null"], "description": "ISO-8601 date, if known." },
+    "knowledge_cutoff": { "type": ["string", "null"], "description": "Training-data cutoff as published by the source." },
+    "hugging_face_id": { "type": ["string", "null"], "description": "Exact repository id when the weights are published (e.g. org/name). Presence is the open-weights signal; never inferred." },
+    "benchmarks": {
+      "type": ["object", "null"],
+      "description": "Third-party benchmark scores as published by the source (e.g. artificial_analysis indices, design_arena ELO rows). Never first-party; kept under its own key so it is never confused with a vendor-stated fact.",
+      "additionalProperties": true
+    },
+    "lifecycle": {
+      "type": "object",
+      "required": ["status"],
+      "additionalProperties": false,
+      "properties": {
+        "status": { "enum": ["preview", "beta", "ga", "deprecated", "retired", "unknown"] },
+        "deprecated_at": { "type": ["string", "null"] },
+        "retired_at": { "type": ["string", "null"] },
+        "notice": { "type": ["string", "null"] }
+      }
+    },
+    "context": {
+      "type": "object",
+      "required": ["max_input_tokens", "max_output_tokens"],
+      "additionalProperties": false,
+      "properties": {
+        "max_input_tokens": { "type": ["integer", "null"], "minimum": 1 },
+        "max_output_tokens": { "type": ["integer", "null"], "minimum": 1 }
+      }
+    },
+    "pricing": {
+      "type": "object",
+      "required": ["currency", "unit"],
+      "additionalProperties": false,
+      "properties": {
+        "currency": { "type": "string" },
+        "unit": { "const": "per_mtok" },
+        "input": { "type": ["number", "null"], "minimum": 0 },
+        "output": { "type": ["number", "null"], "minimum": 0 },
+        "cached_input": { "type": ["number", "null"], "minimum": 0 },
+        "cache_write": { "type": ["number", "null"], "minimum": 0 },
+        "tiers": {
+          "type": ["array", "null"],
+          "description": "Higher-usage price bands. The base input/output fields are the FIRST band; each entry applies once the prompt exceeds above_input_tokens. Present means a single flat price would be wrong.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["above_input_tokens"],
+            "properties": {
+              "above_input_tokens": { "type": "integer", "minimum": 1 },
+              "input": { "type": ["number", "null"], "minimum": 0 },
+              "output": { "type": ["number", "null"], "minimum": 0 },
+              "cached_input": { "type": ["number", "null"], "minimum": 0 },
+              "cache_write": { "type": ["number", "null"], "minimum": 0 }
+            }
+          }
+        },
+        "notes": { "type": ["string", "null"] }
+      }
+    },
+    "capabilities": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "vision": { "type": ["boolean", "null"] },
+        "tool_use": { "type": ["boolean", "null"] },
+        "streaming": { "type": ["boolean", "null"] },
+        "structured_outputs": { "type": ["boolean", "null"] },
+        "prompt_caching": { "type": ["boolean", "null"] },
+        "batch": { "type": ["boolean", "null"] },
+        "thinking": { "enum": ["adaptive", "manual", "none", null] },
+        "effort_levels": { "type": ["array", "null"], "items": { "type": "string" } },
+        "sampling": { "type": ["boolean", "null"] },
+        "prefill": { "type": ["boolean", "null"] },
+        "fast_mode": { "type": ["boolean", "null"] },
+        "compaction": { "type": ["boolean", "null"] },
+        "task_budgets": { "type": ["boolean", "null"] },
+        "web_search": { "type": ["boolean", "null"] },
+        "web_fetch": { "type": ["boolean", "null"] },
+        "code_execution": { "type": ["boolean", "null"] }
+      }
+    },
+    "as_of": {
+      "type": "string",
+      "description": "ISO-8601 date the facts above were true as of. A record is only as good as its as_of."
+    },
+    "confidence": { "enum": ["verified", "partly_verified", "unverified", "estimated"] },
+    "conflicts": {
+      "type": "array",
+      "description": "Disagreements between sources that were NOT auto-resolved (e.g. two vendors quote different prices). Surfaced rather than silently merged.",
+      "items": { "type": "object" }
+    },
+    "provenance": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["source_url", "source_type", "retrieved_at"],
+        "additionalProperties": false,
+        "properties": {
+          "source_url": { "type": "string" },
+          "source_type": { "enum": ["vendor_docs", "vendor_api", "vendor_pricing_page", "third_party", "manual"] },
+          "retrieved_at": { "type": "string" },
+          "note": { "type": ["string", "null"] }
+        }
+      }
+    }
+  }
+}

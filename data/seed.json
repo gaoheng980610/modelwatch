@@ -1,0 +1,210 @@
+{
+  "meta": {
+    "schema_version": "0.1.0",
+    "dataset": "modelwatch",
+    "generated_at": "2026-10-08",
+    "as_of": "2026-06-24",
+    "note": "Seed dataset. Anthropic records are transcribed from Anthropic's own API reference (model table cached 2026-06-24). Every non-Anthropic provider is intentionally EMPTY pending the collector - no figures are guessed. Refresh via src/collector.py (P1) before any public launch.",
+    "providers_pending": ["openai", "google", "meta", "mistral", "deepseek", "xai"]
+  },
+  "models": [
+    {
+      "id": "claude-fable-5",
+      "provider": "anthropic",
+      "display_name": "Claude Fable 5",
+      "family": "fable",
+      "released": null,
+      "lifecycle": { "status": "ga", "deprecated_at": null, "retired_at": null, "notice": "Requires 30-day data retention; not available under zero data retention." },
+      "context": { "max_input_tokens": 1000000, "max_output_tokens": 128000 },
+      "pricing": { "currency": "USD", "unit": "per_mtok", "input": 10.0, "output": 50.0, "cached_input": null, "cache_write": null, "notes": null },
+      "capabilities": {
+        "vision": true, "tool_use": true, "streaming": true, "structured_outputs": true,
+        "prompt_caching": true, "batch": true,
+        "thinking": "adaptive", "effort_levels": ["low", "medium", "high", "xhigh", "max"],
+        "sampling": false, "prefill": false, "fast_mode": false, "compaction": true,
+        "task_budgets": true, "web_search": true, "web_fetch": true, "code_execution": true
+      },
+      "as_of": "2026-06-24",
+      "confidence": "verified",
+      "provenance": [
+        { "source_url": "https://docs.anthropic.com/en/docs/about-claude/models/overview", "source_type": "vendor_docs", "retrieved_at": "2026-06-24", "note": "Anthropic API reference model table + thinking/effort capability tables (cached 2026-06-24)." }
+      ]
+    },
+    {
+      "id": "claude-mythos-5",
+      "provider": "anthropic",
+      "display_name": "Claude Mythos 5",
+      "family": "mythos",
+      "released": null,
+      "lifecycle": { "status": "preview", "deprecated_at": null, "retired_at": null, "notice": "Available on Project Glasswing only. Same capabilities/pricing/API surface as Claude Fable 5." },
+      "context": { "max_input_tokens": 1000000, "max_output_tokens": 128000 },
+      "pricing": { "currency": "USD", "unit": "per_mtok", "input": 10.0, "output": 50.0, "cached_input": null, "cache_write": null, "notes": "Project Glasswing (invitation) access only." },
+      "capabilities": {
+        "vision": true, "tool_use": true, "streaming": true, "structured_outputs": true,
+        "prompt_caching": true, "batch": true,
+        "thinking": "adaptive", "effort_levels": ["low", "medium", "high", "xhigh", "max"],
+        "sampling": false, "prefill": false, "fast_mode": false, "compaction": true,
+        "task_budgets": true, "web_search": true, "web_fetch": true, "code_execution": true
+      },
+      "as_of": "2026-06-24",
+      "confidence": "verified",
+      "provenance": [
+        { "source_url": "https://docs.anthropic.com/en/docs/about-claude/models/overview", "source_type": "vendor_docs", "retrieved_at": "2026-06-24", "note": "Listed alongside Fable 5 with identical specs (Project Glasswing)." }
+      ]
+    },
+    {
+      "id": "claude-opus-5",
+      "provider": "anthropic",
+      "display_name": "Claude Opus 5",
+      "family": "opus",
+      "released": null,
+      "lifecycle": { "status": "ga", "deprecated_at": null, "retired_at": null, "notice": "Excluded from Priority Tier." },
+      "context": { "max_input_tokens": 1000000, "max_output_tokens": 128000 },
+      "pricing": { "currency": "USD", "unit": "per_mtok", "input": 5.0, "output": 25.0, "cached_input": null, "cache_write": null, "notes": "Fast mode priced at $10/$50 per MTok." },
+      "capabilities": {
+        "vision": true, "tool_use": true, "streaming": true, "structured_outputs": true,
+        "prompt_caching": true, "batch": true,
+        "thinking": "adaptive", "effort_levels": ["low", "medium", "high", "xhigh", "max"],
+        "sampling": false, "prefill": false, "fast_mode": true, "compaction": true,
+        "task_budgets": true, "web_search": true, "web_fetch": true, "code_execution": true
+      },
+      "as_of": "2026-06-24",
+      "confidence": "verified",
+      "provenance": [
+        { "source_url": "https://docs.anthropic.com/en/docs/about-claude/models/overview", "source_type": "vendor_docs", "retrieved_at": "2026-06-24", "note": "Anthropic API reference (cached 2026-06-24). Thinking on by default; fast mode available." }
+      ]
+    },
+    {
+      "id": "claude-opus-4-8",
+      "provider": "anthropic",
+      "display_name": "Claude Opus 4.8",
+      "family": "opus",
+      "released": null,
+      "lifecycle": { "status": "ga", "deprecated_at": null, "retired_at": null, "notice": "Supported by Priority Tier. Older sibling of Opus 5; still GA." },
+      "context": { "max_input_tokens": 1000000, "max_output_tokens": 128000 },
+      "pricing": { "currency": "USD", "unit": "per_mtok", "input": 5.0, "output": 25.0, "cached_input": null, "cache_write": null, "notes": "Fast mode priced at $10/$50 per MTok." },
+      "capabilities": {
+        "vision": true, "tool_use": true, "streaming": true, "structured_outputs": true,
+        "prompt_caching": true, "batch": true,
+        "thinking": "adaptive", "effort_levels": ["low", "medium", "high", "xhigh", "max"],
+        "sampling": false, "prefill": false, "fast_mode": true, "compaction": true,
+        "task_budgets": true, "web_search": true, "web_fetch": true, "code_execution": true
+      },
+      "as_of": "2026-06-24",
+      "confidence": "verified",
+      "provenance": [
+        { "source_url": "https://docs.anthropic.com/en/docs/about-claude/models/overview", "source_type": "vendor_docs", "retrieved_at": "2026-06-24", "note": "Thinking off by default - set adaptive explicitly." }
+      ]
+    },
+    {
+      "id": "claude-opus-4-7",
+      "provider": "anthropic",
+      "display_name": "Claude Opus 4.7",
+      "family": "opus",
+      "released": null,
+      "lifecycle": { "status": "ga", "deprecated_at": null, "retired_at": null, "notice": "Fast mode REMOVED on 4.7 (speed:'fast' errors)." },
+      "context": { "max_input_tokens": 1000000, "max_output_tokens": 128000 },
+      "pricing": { "currency": "USD", "unit": "per_mtok", "input": 5.0, "output": 25.0, "cached_input": null, "cache_write": null, "notes": null },
+      "capabilities": {
+        "vision": true, "tool_use": true, "streaming": true, "structured_outputs": true,
+        "prompt_caching": true, "batch": true,
+        "thinking": "adaptive", "effort_levels": ["low", "medium", "high", "xhigh", "max"],
+        "sampling": false, "prefill": false, "fast_mode": false, "compaction": true,
+        "task_budgets": true, "web_search": true, "web_fetch": true, "code_execution": true
+      },
+      "as_of": "2026-06-24",
+      "confidence": "verified",
+      "provenance": [
+        { "source_url": "https://docs.anthropic.com/en/docs/about-claude/models/overview", "source_type": "vendor_docs", "retrieved_at": "2026-06-24", "note": "Introduced xhigh effort and the current tokenizer." }
+      ]
+    },
+    {
+      "id": "claude-opus-4-6",
+      "provider": "anthropic",
+      "display_name": "Claude Opus 4.6",
+      "family": "opus",
+      "released": null,
+      "lifecycle": { "status": "ga", "deprecated_at": null, "retired_at": null, "notice": "budget_tokens still functional here as a transitional escape hatch." },
+      "context": { "max_input_tokens": 1000000, "max_output_tokens": 128000 },
+      "pricing": { "currency": "USD", "unit": "per_mtok", "input": 5.0, "output": 25.0, "cached_input": null, "cache_write": null, "notes": null },
+      "capabilities": {
+        "vision": true, "tool_use": true, "streaming": true, "structured_outputs": true,
+        "prompt_caching": true, "batch": true,
+        "thinking": "adaptive", "effort_levels": ["low", "medium", "high", "max"],
+        "sampling": true, "prefill": false, "fast_mode": false, "compaction": true,
+        "task_budgets": false, "web_search": true, "web_fetch": true, "code_execution": true
+      },
+      "as_of": "2026-06-24",
+      "confidence": "verified",
+      "provenance": [
+        { "source_url": "https://docs.anthropic.com/en/docs/about-claude/models/overview", "source_type": "vendor_docs", "retrieved_at": "2026-06-24", "note": "No xhigh; no task budgets; sampling allowed." }
+      ]
+    },
+    {
+      "id": "claude-sonnet-5",
+      "provider": "anthropic",
+      "display_name": "Claude Sonnet 5",
+      "family": "sonnet",
+      "released": null,
+      "lifecycle": { "status": "ga", "deprecated_at": null, "retired_at": null, "notice": "Excluded from Priority Tier." },
+      "context": { "max_input_tokens": 1000000, "max_output_tokens": 128000 },
+      "pricing": { "currency": "USD", "unit": "per_mtok", "input": 2.0, "output": 10.0, "cached_input": null, "cache_write": null, "notes": null },
+      "capabilities": {
+        "vision": true, "tool_use": true, "streaming": true, "structured_outputs": true,
+        "prompt_caching": true, "batch": true,
+        "thinking": "adaptive", "effort_levels": ["low", "medium", "high", "xhigh", "max"],
+        "sampling": false, "prefill": false, "fast_mode": false, "compaction": true,
+        "task_budgets": true, "web_search": true, "web_fetch": true, "code_execution": true
+      },
+      "as_of": "2026-06-24",
+      "confidence": "verified",
+      "provenance": [
+        { "source_url": "https://docs.anthropic.com/en/docs/about-claude/models/overview", "source_type": "vendor_docs", "retrieved_at": "2026-06-24", "note": "No mid-conversation system messages on Sonnet 5." }
+      ]
+    },
+    {
+      "id": "claude-sonnet-4-6",
+      "provider": "anthropic",
+      "display_name": "Claude Sonnet 4.6",
+      "family": "sonnet",
+      "released": null,
+      "lifecycle": { "status": "ga", "deprecated_at": null, "retired_at": null, "notice": "budget_tokens still functional here as a transitional escape hatch." },
+      "context": { "max_input_tokens": 1000000, "max_output_tokens": 128000 },
+      "pricing": { "currency": "USD", "unit": "per_mtok", "input": 3.0, "output": 15.0, "cached_input": null, "cache_write": null, "notes": null },
+      "capabilities": {
+        "vision": true, "tool_use": true, "streaming": true, "structured_outputs": true,
+        "prompt_caching": true, "batch": true,
+        "thinking": "adaptive", "effort_levels": ["low", "medium", "high", "max"],
+        "sampling": true, "prefill": false, "fast_mode": false, "compaction": true,
+        "task_budgets": false, "web_search": true, "web_fetch": true, "code_execution": true
+      },
+      "as_of": "2026-06-24",
+      "confidence": "verified",
+      "provenance": [
+        { "source_url": "https://docs.anthropic.com/en/docs/about-claude/models/overview", "source_type": "vendor_docs", "retrieved_at": "2026-06-24", "note": "No xhigh; no task budgets; sampling allowed." }
+      ]
+    },
+    {
+      "id": "claude-haiku-4-5",
+      "provider": "anthropic",
+      "display_name": "Claude Haiku 4.5",
+      "family": "haiku",
+      "released": null,
+      "lifecycle": { "status": "ga", "deprecated_at": null, "retired_at": null, "notice": null },
+      "context": { "max_input_tokens": 200000, "max_output_tokens": null },
+      "pricing": { "currency": "USD", "unit": "per_mtok", "input": 1.0, "output": 5.0, "cached_input": null, "cache_write": null, "notes": null },
+      "capabilities": {
+        "vision": true, "tool_use": true, "streaming": true, "structured_outputs": true,
+        "prompt_caching": true, "batch": true,
+        "thinking": "manual", "effort_levels": null,
+        "sampling": true, "prefill": true, "fast_mode": false, "compaction": false,
+        "task_budgets": false, "web_search": true, "web_fetch": true, "code_execution": false
+      },
+      "as_of": "2026-06-24",
+      "confidence": "partly_verified",
+      "provenance": [
+        { "source_url": "https://docs.anthropic.com/en/docs/about-claude/models/overview", "source_type": "vendor_docs", "retrieved_at": "2026-06-24", "note": "Older generation: uses budget_tokens thinking; effort parameter errors. max_output_tokens not stated in the source table - left null rather than guessed." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "models": [
+    "claude-opus-5",
+    "claude-sonnet-5",
+    "gpt-6-luna-pro"
+  ],
+  "minPriceChangePct": 5,
+  "types": ["price_input", "price_output", "lifecycle_status", "removed"]
+}
