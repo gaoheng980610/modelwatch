@@ -128,7 +128,6 @@ def main() -> int:
             "dataset": "modelwatch",
             "generated_at": retrieved_at[:10],
             "as_of": max((m.get("as_of") or "" for m in merged.values()), default=""),
-            "collected_at": retrieved_at,
         },
         "models": [merged[key] for key in sorted(merged)],
     }

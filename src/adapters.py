@@ -74,7 +74,7 @@ def anthropic_models_api(payload: dict, *, retrieved_at: str) -> list[dict]:
             "provenance": [{
                 "source_url": "https://api.anthropic.com/v1/models",
                 "source_type": "vendor_api",
-                "retrieved_at": retrieved_at,
+                "retrieved_at": _date_only(retrieved_at),
                 "note": "Live Models API.",
             }],
         })
@@ -259,7 +259,7 @@ def openrouter_models_api(payload: dict, *, retrieved_at: str) -> list[dict]:
             "provenance": [{
                 "source_url": "https://openrouter.ai/api/v1/models",
                 "source_type": "third_party",
-                "retrieved_at": retrieved_at,
+                "retrieved_at": _date_only(retrieved_at),
                 "note": "OpenRouter public model catalog (aggregated; not first-party).",
             }],
         })
