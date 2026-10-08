@@ -97,19 +97,29 @@ severity derived from the *direction* of a change. Payload renderers for email, 
 - Has the competitive picture changed? (artificialanalysis.ai and llm-prices.com are the two that
   matter; a browser check is enough.)
 
-## 7. Known gap: we are blind
+## 7. Analytics — the blind spot, now wired
 
-**There is no analytics of any kind.** We cannot tell whether zero or ten thousand people visit. For
-a project whose entire remaining risk is discovery, that is the most important missing piece.
+This was the most important gap: with no analytics at all, the project could not tell zero visitors
+from ten thousand, and discovery is its entire remaining risk.
 
-Options, cheapest first:
-1. **Cloudflare Web Analytics** — free, no cookies, no consent banner. Point the site at Cloudflare,
-   or use their JS snippet. *Needs an account.*
-2. A self-hosted counter (Umami, Plausible CE) — needs a host.
-3. GitHub Pages offers **no** traffic statistics. Do not count on it.
+**Cloudflare Web Analytics** is now injected into every page (free, cookieless, no consent banner
+needed, and it does not track individuals). Wired through `src/config.py` as
+`MODELWATCH_CF_ANALYTICS`, rendered by `_analytics_beacon()`, and defaulted in the workflow. The
+token is not a secret — the same string is served in the HTML of every page — so committing it
+leaks nothing; a repo variable of the same name overrides it.
 
-Until one of these exists, "check monthly: is anyone visiting?" has no answer, and any claim about
-traction is a guess.
+The token is validated against `[A-Za-z0-9]+` before it reaches the page: a malformed value must not
+be able to inject markup into 751 files.
+
+**What it gives us, and why it matters more than the numbers:** it is the *only* signal in this
+project that can come back negative from outside. Every other check here — 63 tests, validate, audit,
+link and claim checkers, Lighthouse — proves only that the site is internally consistent and says
+nothing about whether anyone wants it. A flat zero in the Cloudflare dashboard is the first honest
+answer this project will ever get.
+
+**Where to look:** Cloudflare dashboard → Analytics & Logs → Web Analytics → `gaoheng980610.github.io`.
+After the domain moves, add `modelwatch.is-a.dev` as an additional hostname there, or its traffic
+will not be counted.
 
 ## 8. Monetization — the honest version
 

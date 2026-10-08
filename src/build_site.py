@@ -490,7 +490,9 @@ def _analytics_beacon() -> str:
     """
     if not CF_ANALYTICS or not re.fullmatch(r"[A-Za-z0-9]+", CF_ANALYTICS):
         return ""
-    return ('<script defer src="https://static.cloudflareinsights.com/beacon.min.js" '
+    # Matches the snippet Cloudflare currently hands out, rather than an older
+    # `defer` variant — it is what their own install instructions are tested against.
+    return ("<script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' "
             "data-cf-beacon='{\"token\": \"" + CF_ANALYTICS + "\"}'></script>\n")
 
 

@@ -35,9 +35,11 @@ env:
   # file Pages needs — no commit required. Remember to set the same domain under
   # Settings -> Pages and to point DNS at GitHub.
   MODELWATCH_CNAME: ${{ vars.MODELWATCH_CNAME }}
-  # Cloudflare Web Analytics token (Settings -> Secrets and variables -> Actions
-  # -> Variables). Without it this project has no idea whether anyone visits.
-  MODELWATCH_CF_ANALYTICS: ${{ vars.MODELWATCH_CF_ANALYTICS }}
+  # Cloudflare Web Analytics token. Without it this project has no idea whether
+  # anyone visits. Not a secret: the same token is served in the HTML of every
+  # page, so committing it leaks nothing. A repo variable of the same name
+  # overrides it if one is ever set.
+  MODELWATCH_CF_ANALYTICS: ${{ vars.MODELWATCH_CF_ANALYTICS || 'cdf361f1ea964b8fb0e89ab26d6b0eb4' }}
 
 jobs:
   collect:
