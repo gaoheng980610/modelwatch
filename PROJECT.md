@@ -3,6 +3,10 @@
 Written 2026-10-08. Everything about this project in one place: what exists, what does not, what to
 check, and how it could ever make money. The lessons that produced it are in `../LESSONS.md`.
 
+> **Working on this in a fresh session?** Read **`OPERATIONS.md`** first. It covers the things that
+> look broken but are not — this machine blocks `github.com`, git needs a local proxy, and pushes
+> collide with the CI's own data commits.
+
 ---
 
 ## 1. Where it lives
