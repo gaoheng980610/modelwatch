@@ -1,8 +1,8 @@
 {
   "meta": {
-    "entries": 11,
+    "entries": 12,
     "first": "2026-10-08",
-    "latest": "2026-10-08T1030Z",
+    "latest": "2026-10-08T1032Z",
     "total_changes": 38
   },
   "entries": [
@@ -315,6 +315,13 @@
       "from": "2026-10-08T1027Z",
       "to": "2026-10-08T1030Z",
       "detected_at": "2026-10-08T10:30:27Z",
+      "count": 0,
+      "changes": []
+    },
+    {
+      "from": "2026-10-08T1030Z",
+      "to": "2026-10-08T1032Z",
+      "detected_at": "2026-10-08T10:32:28Z",
       "count": 0,
       "changes": []
     }
