@@ -1,9 +1,9 @@
 {
   "meta": {
-    "entries": 2,
+    "entries": 3,
     "first": "2026-10-08",
-    "latest": "2026-10-08T0935Z",
-    "total_changes": 3
+    "latest": "2026-10-08T0936Z",
+    "total_changes": 6
   },
   "entries": [
     {
@@ -38,6 +38,32 @@
       "detected_at": "2026-10-08T09:36:03Z",
       "count": 0,
       "changes": []
+    },
+    {
+      "from": "2026-10-08T0935Z",
+      "to": "2026-10-08T0936Z",
+      "detected_at": "2026-10-08T09:36:18Z",
+      "count": 3,
+      "changes": [
+        {
+          "model": "glm-flash-latest",
+          "type": "price_output",
+          "from": 1.883057,
+          "to": 2.071362
+        },
+        {
+          "model": "kimi-latest",
+          "type": "price_input",
+          "from": 0.53,
+          "to": 0.52
+        },
+        {
+          "model": "kimi-latest",
+          "type": "price_output",
+          "from": 15.0,
+          "to": 13.0
+        }
+      ]
     }
   ]
 }
