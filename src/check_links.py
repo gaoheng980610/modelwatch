@@ -12,7 +12,6 @@ Stdlib only.  Exit 1 if anything is broken.
 """
 from __future__ import annotations
 
-import os
 import re
 import sys
 from pathlib import Path
@@ -20,10 +19,8 @@ from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = ROOT / "site"
-BASE_URL = os.environ.get("MODELWATCH_BASE_URL", "https://modelwatch.example").rstrip("/")
-# Mirrors build_site: on a project page every internal link carries the repo's
-# sub-path, so it must be stripped before mapping the URL onto a file.
-BASE_PATH = urlsplit(BASE_URL).path.rstrip("/")
+sys.path.insert(0, str(ROOT / "src"))
+from config import BASE_PATH, BASE_URL  # noqa: E402
 
 ATTR = re.compile(r'(?:href|src)="([^"]+)"')
 LOC = re.compile(r"<loc>([^<]+)</loc>")
@@ -68,7 +65,13 @@ def main() -> int:
     for page, text in targets:
         base_dir = page.parent
         for raw in ATTR.findall(text):
-            url = raw[len(BASE_URL):] or "/" if raw.startswith(BASE_URL) else raw
+            # Only our own origin counts as internal. A bare startswith() would
+            # also swallow a different host that shares the prefix, e.g.
+            # "https://a.example" matching "https://a.example.com".
+            if raw == BASE_URL or raw.startswith(BASE_URL + "/"):
+                url = raw[len(BASE_URL):] or "/"
+            else:
+                url = raw
             if is_external(url):
                 continue
             checked += 1

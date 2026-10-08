@@ -29,6 +29,12 @@ env:
   # needs this prefix. It drives canonical URLs, og tags, the sitemap and the
   # in-page JS. Change it (and that is all) to move to a custom domain.
   MODELWATCH_BASE_URL: https://gaoheng980610.github.io/modelwatch
+  # To serve on a custom domain instead, set the repo variable MODELWATCH_CNAME
+  # (Settings -> Secrets and variables -> Actions -> Variables) to e.g.
+  # "modelwatch.dev". It wins over MODELWATCH_BASE_URL and also emits the CNAME
+  # file Pages needs — no commit required. Remember to set the same domain under
+  # Settings -> Pages and to point DNS at GitHub.
+  MODELWATCH_CNAME: ${{ vars.MODELWATCH_CNAME }}
 
 jobs:
   collect:

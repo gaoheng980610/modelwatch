@@ -25,6 +25,7 @@ from urllib.parse import urlsplit
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import monitor  # noqa: E402
+from config import BASE_PATH, BASE_URL, CNAME  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 DATA_FILE = ROOT / "data" / "models.json"
@@ -32,16 +33,8 @@ SITE = ROOT / "site"
 HISTORY_DIR = ROOT / "data" / "history"
 CHANGE_LOG = ROOT / "data" / "changes" / "log.json"
 
-# The public origin. Set MODELWATCH_BASE_URL at deploy time so going live is a
-# config change, not a code edit (it drives canonical URLs, og tags and the sitemap).
-BASE_URL = os.environ.get("MODELWATCH_BASE_URL", "https://modelwatch.example").rstrip("/")
-
-# A project page (e.g. <user>.github.io/<repo>/) is served from a sub-path, where
-# a root-absolute "/assets/style.css" resolves to the wrong place. Rather than
-# teach 40-odd call sites about it, the prefix is derived here and applied once,
-# to the finished HTML, in page().
-BASE_PATH = urlsplit(BASE_URL).path.rstrip("/")
-
+# The public origin lives in src/config.py, shared with the link checker so the
+# two can never disagree about where the site is served from.
 _INTERNAL_URL = re.compile(r'((?:href|src)=")/')
 
 
@@ -1653,6 +1646,9 @@ def main() -> None:
 
     write("sitemap.xml", build_sitemap(models, compare_urls))
     write("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {BASE_URL}/sitemap.xml\n")
+    if CNAME:
+        # GitHub Pages reads this from the published root to bind the domain.
+        write("CNAME", CNAME + "\n")
     # Cache/security headers for hosts that read a `_headers` file
     # (Cloudflare Pages, Netlify). The performance trace flagged both missing
     # caching and uncompressed documents on a plain file server.
