@@ -1,9 +1,9 @@
 {
   "meta": {
-    "entries": 12,
+    "entries": 13,
     "first": "2026-10-08",
-    "latest": "2026-10-08T1032Z",
-    "total_changes": 38
+    "latest": "2026-10-08T1041Z",
+    "total_changes": 46
   },
   "entries": [
     {
@@ -324,6 +324,62 @@
       "detected_at": "2026-10-08T10:32:28Z",
       "count": 0,
       "changes": []
+    },
+    {
+      "from": "2026-10-08T1032Z",
+      "to": "2026-10-08T1041Z",
+      "detected_at": "2026-10-08T10:41:46Z",
+      "count": 8,
+      "changes": [
+        {
+          "model": "deepseek-v4-1-flash",
+          "type": "price_input",
+          "from": 0.3,
+          "to": 0.0346
+        },
+        {
+          "model": "deepseek-v4-1-flash",
+          "type": "price_output",
+          "from": 1.2,
+          "to": 1.0
+        },
+        {
+          "model": "deepseek-v4-1-flash",
+          "type": "price_cached_input",
+          "from": 0.006,
+          "to": 0.01
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "type": "price_input",
+          "from": 0.0079,
+          "to": 0.006
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "type": "price_cached_input",
+          "from": 0.0079,
+          "to": 0.006
+        },
+        {
+          "model": "deepseek-v4-flash-latest",
+          "type": "price_input",
+          "from": 0.00632,
+          "to": 0.006
+        },
+        {
+          "model": "deepseek-v4-flash-latest",
+          "type": "price_output",
+          "from": 0.39043,
+          "to": 1.28
+        },
+        {
+          "model": "deepseek-v4-flash-latest",
+          "type": "price_cached_input",
+          "from": 0.00632,
+          "to": 0.006
+        }
+      ]
     }
   ]
 }
