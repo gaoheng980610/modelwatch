@@ -74,16 +74,15 @@ jobs:
             git commit -m "chore(data): snapshot $(date -u +%F)"
           git push
 
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
-        with:
-          enablement: true      # turn Pages on if it is not already
-
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: site
 
+  # Publishing lives in its own job on purpose: a Pages misconfiguration must
+  # never be able to fail the collection job above, which is the part that
+  # matters. Note that a token CANNOT create a Pages site — that is a one-time
+  # repo setting (Settings -> Pages -> Source: GitHub Actions).
   deploy:
     needs: collect
     runs-on: ubuntu-latest
@@ -91,5 +90,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - uses: actions/configure-pages@v5
       - id: deployment
         uses: actions/deploy-pages@v4
+
