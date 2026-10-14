@@ -1,9 +1,9 @@
 {
   "meta": {
-    "entries": 19,
+    "entries": 20,
     "first": "2026-10-08",
-    "latest": "2026-10-13T1408Z",
-    "total_changes": 344
+    "latest": "2026-10-14T1148Z",
+    "total_changes": 408
   },
   "entries": [
     {
@@ -2214,6 +2214,398 @@
           "type": "max_output",
           "from": 176947,
           "to": 131072
+        }
+      ]
+    },
+    {
+      "from": "2026-10-13T1408Z",
+      "to": "2026-10-14T1148Z",
+      "detected_at": "2026-10-14T11:48:59Z",
+      "count": 64,
+      "changes": [
+        {
+          "model": "gemini-4-argon",
+          "type": "added",
+          "from": null,
+          "to": "Gemini 4 Argon"
+        },
+        {
+          "model": "lfm-2-5-24b-a2b",
+          "type": "added",
+          "from": null,
+          "to": "LFM2.5-24B-A2B"
+        },
+        {
+          "model": "pareto-26-9",
+          "type": "added",
+          "from": null,
+          "to": "Pareto 26.9"
+        },
+        {
+          "model": "pareto-latest",
+          "type": "added",
+          "from": null,
+          "to": "Pareto Latest"
+        },
+        {
+          "model": "ling-3-0-flash-fin",
+          "type": "removed",
+          "from": "Ling 3.0 Flash Fin",
+          "to": null
+        },
+        {
+          "model": "ling-3-0-flash-sante",
+          "type": "removed",
+          "from": "Ling 3.0 Flash Sante",
+          "to": null
+        },
+        {
+          "model": "pareto",
+          "type": "removed",
+          "from": "Pareto",
+          "to": null
+        },
+        {
+          "model": "deepseek-flash-latest",
+          "type": "price_input",
+          "from": 0.0438,
+          "to": 0.02016
+        },
+        {
+          "model": "deepseek-flash-latest",
+          "type": "price_output",
+          "from": 0.1752,
+          "to": 0.891
+        },
+        {
+          "model": "deepseek-flash-latest",
+          "type": "price_cached_input",
+          "from": 0.000876,
+          "to": 0.0054
+        },
+        {
+          "model": "deepseek-flash-latest",
+          "type": "max_output",
+          "from": 393216,
+          "to": 943718
+        },
+        {
+          "model": "deepseek-pro-latest",
+          "type": "price_input",
+          "from": 0.24948,
+          "to": 0.225
+        },
+        {
+          "model": "deepseek-pro-latest",
+          "type": "price_output",
+          "from": 0.74844,
+          "to": 8.0
+        },
+        {
+          "model": "deepseek-pro-latest",
+          "type": "price_cached_input",
+          "from": 0.007938,
+          "to": 0.23
+        },
+        {
+          "model": "deepseek-v4-1-flash",
+          "type": "price_input",
+          "from": 0.0438,
+          "to": 0.02016
+        },
+        {
+          "model": "deepseek-v4-1-flash",
+          "type": "price_output",
+          "from": 0.1752,
+          "to": 0.891
+        },
+        {
+          "model": "deepseek-v4-1-flash",
+          "type": "price_cached_input",
+          "from": 0.000876,
+          "to": 0.0054
+        },
+        {
+          "model": "deepseek-v4-1-flash",
+          "type": "max_output",
+          "from": 393216,
+          "to": 943718
+        },
+        {
+          "model": "deepseek-v4-flash",
+          "type": "price_input",
+          "from": 0.05,
+          "to": 0.091
+        },
+        {
+          "model": "deepseek-v4-flash",
+          "type": "price_output",
+          "from": 1.28,
+          "to": 0.182
+        },
+        {
+          "model": "deepseek-v4-flash",
+          "type": "price_cached_input",
+          "from": 0.05,
+          "to": 0.0182
+        },
+        {
+          "model": "deepseek-v4-flash",
+          "type": "max_output",
+          "from": 943718,
+          "to": 943717
+        },
+        {
+          "model": "deepseek-v4-pro",
+          "type": "price_input",
+          "from": 0.442656,
+          "to": 0.95526
+        },
+        {
+          "model": "deepseek-v4-pro",
+          "type": "price_output",
+          "from": 0.885312,
+          "to": 1.91052
+        },
+        {
+          "model": "deepseek-v4-pro",
+          "type": "price_cached_input",
+          "from": 0.036888,
+          "to": 0.079605
+        },
+        {
+          "model": "glm-5-1",
+          "type": "price_input",
+          "from": 0.966,
+          "to": 1.33
+        },
+        {
+          "model": "glm-5-1",
+          "type": "price_output",
+          "from": 3.036,
+          "to": 4.18
+        },
+        {
+          "model": "glm-5-1",
+          "type": "price_cached_input",
+          "from": 0.1794,
+          "to": 0.247
+        },
+        {
+          "model": "glm-5-1",
+          "type": "max_output",
+          "from": 128000,
+          "to": 131072
+        },
+        {
+          "model": "glm-5-2",
+          "type": "price_input",
+          "from": 0.06,
+          "to": 0.05
+        },
+        {
+          "model": "glm-5-2",
+          "type": "price_cached_input",
+          "from": 0.059,
+          "to": 0.049
+        },
+        {
+          "model": "glm-5-3-flash",
+          "type": "price_input",
+          "from": 0.0261,
+          "to": 0.036
+        },
+        {
+          "model": "glm-flash-latest",
+          "type": "price_input",
+          "from": 0.0261,
+          "to": 0.036
+        },
+        {
+          "model": "glm-latest",
+          "type": "price_input",
+          "from": 0.055,
+          "to": 0.0576
+        },
+        {
+          "model": "glm-latest",
+          "type": "price_output",
+          "from": 5.0,
+          "to": 4.4
+        },
+        {
+          "model": "glm-latest",
+          "type": "price_cached_input",
+          "from": 0.06,
+          "to": 0.0536
+        },
+        {
+          "model": "glm-latest",
+          "type": "max_output",
+          "from": 943718,
+          "to": 131072
+        },
+        {
+          "model": "gpt-oss-120b",
+          "type": "price_input",
+          "from": 0.15,
+          "to": 0.037
+        },
+        {
+          "model": "gpt-oss-120b",
+          "type": "price_output",
+          "from": 0.6,
+          "to": 0.17
+        },
+        {
+          "model": "gpt-oss-120b",
+          "type": "price_cached_input",
+          "from": 0.075,
+          "to": null
+        },
+        {
+          "model": "gpt-oss-120b",
+          "type": "max_output",
+          "from": 65536,
+          "to": 117964
+        },
+        {
+          "model": "kimi-k3",
+          "type": "price_input",
+          "from": 0.73,
+          "to": 0.7
+        },
+        {
+          "model": "kimi-k3",
+          "type": "price_output",
+          "from": 10.0,
+          "to": 15.0
+        },
+        {
+          "model": "kimi-k3",
+          "type": "price_cached_input",
+          "from": 0.55,
+          "to": 0.32
+        },
+        {
+          "model": "kimi-latest",
+          "type": "price_input",
+          "from": 0.73,
+          "to": 0.536
+        },
+        {
+          "model": "kimi-latest",
+          "type": "price_output",
+          "from": 10.0,
+          "to": 14.0
+        },
+        {
+          "model": "kimi-latest",
+          "type": "price_cached_input",
+          "from": 0.55,
+          "to": 0.3
+        },
+        {
+          "model": "ling-3-0-flash-vl",
+          "type": "price_input",
+          "from": 0.021,
+          "to": 0.06
+        },
+        {
+          "model": "ling-3-0-flash-vl",
+          "type": "price_output",
+          "from": 0.0616,
+          "to": 0.18
+        },
+        {
+          "model": "ling-3-0-flash-vl",
+          "type": "price_cached_input",
+          "from": 0.0042,
+          "to": 0.012
+        },
+        {
+          "model": "ling-3-0-flash-vl",
+          "type": "context_window",
+          "from": 262144,
+          "to": 131072
+        },
+        {
+          "model": "ling-3-1-flash",
+          "type": "price_input",
+          "from": 0.0,
+          "to": 0.075
+        },
+        {
+          "model": "ling-3-1-flash",
+          "type": "price_output",
+          "from": 0.0,
+          "to": 0.225
+        },
+        {
+          "model": "ling-3-1-flash",
+          "type": "price_cached_input",
+          "from": null,
+          "to": 0.015
+        },
+        {
+          "model": "minimax-m2",
+          "type": "price_input",
+          "from": 0.3,
+          "to": 0.255
+        },
+        {
+          "model": "minimax-m2",
+          "type": "price_output",
+          "from": 1.2,
+          "to": 1.02
+        },
+        {
+          "model": "minimax-m2",
+          "type": "max_output",
+          "from": 176947,
+          "to": 131072
+        },
+        {
+          "model": "qwen3-5-35b-a3b",
+          "type": "price_input",
+          "from": 0.08,
+          "to": 0.15
+        },
+        {
+          "model": "qwen3-5-35b-a3b",
+          "type": "price_output",
+          "from": 0.75,
+          "to": 1.0
+        },
+        {
+          "model": "qwen3-5-35b-a3b",
+          "type": "price_cached_input",
+          "from": 0.04,
+          "to": 0.05
+        },
+        {
+          "model": "qwen3-5-35b-a3b",
+          "type": "max_output",
+          "from": 32768,
+          "to": 16384
+        },
+        {
+          "model": "qwen3-5-397b-a17b",
+          "type": "price_input",
+          "from": 0.55,
+          "to": 0.5
+        },
+        {
+          "model": "qwen3-5-397b-a17b",
+          "type": "price_output",
+          "from": 3.5,
+          "to": 3.6
+        },
+        {
+          "model": "qwen3-5-397b-a17b",
+          "type": "price_cached_input",
+          "from": 0.225,
+          "to": 0.3
         }
       ]
     }
