@@ -1,9 +1,9 @@
 {
   "meta": {
-    "entries": 21,
+    "entries": 22,
     "first": "2026-10-08",
-    "latest": "2026-10-15T1125Z",
-    "total_changes": 465
+    "latest": "2026-10-16T1120Z",
+    "total_changes": 555
   },
   "entries": [
     {
@@ -2956,6 +2956,813 @@
           "type": "context_window",
           "from": 1000000,
           "to": 1048576
+        }
+      ]
+    },
+    {
+      "from": "2026-10-15T1125Z",
+      "to": "2026-10-16T1120Z",
+      "detected_at": "2026-10-16T11:20:12Z",
+      "count": 90,
+      "changes": [
+        {
+          "model": "moondream3-1-9b-a2b",
+          "type": "added",
+          "from": null,
+          "to": "Moondream 3.1"
+        },
+        {
+          "model": "moondream3-preview",
+          "type": "added",
+          "from": null,
+          "to": "Moondream 3 Preview"
+        },
+        {
+          "model": "muse-spark-open",
+          "type": "added",
+          "from": null,
+          "to": "Muse Spark Open"
+        },
+        {
+          "model": "nemotron-3-5-super-vl",
+          "type": "added",
+          "from": null,
+          "to": "Nemotron 3.5 Super VL"
+        },
+        {
+          "model": "claude-sonnet-4",
+          "type": "removed",
+          "from": "Claude Sonnet 4",
+          "to": null
+        },
+        {
+          "model": "pareto-26-10-preview",
+          "type": "removed",
+          "from": "Pareto 26.10 Preview",
+          "to": null
+        },
+        {
+          "model": "claude-haiku-5-5",
+          "type": "capability:effort_levels",
+          "from": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "to": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max",
+            "none"
+          ]
+        },
+        {
+          "model": "claude-haiku-latest",
+          "type": "capability:effort_levels",
+          "from": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ],
+          "to": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max",
+            "none"
+          ]
+        },
+        {
+          "model": "deepseek-chat",
+          "type": "price_input",
+          "from": 0.32,
+          "to": 0.2574
+        },
+        {
+          "model": "deepseek-chat",
+          "type": "price_output",
+          "from": 0.89,
+          "to": 1.0287
+        },
+        {
+          "model": "deepseek-chat",
+          "type": "max_output",
+          "from": 16384,
+          "to": 16000
+        },
+        {
+          "model": "deepseek-flash-latest",
+          "type": "price_input",
+          "from": 0.02376,
+          "to": 0.036
+        },
+        {
+          "model": "deepseek-flash-latest",
+          "type": "price_output",
+          "from": 0.72,
+          "to": 0.684
+        },
+        {
+          "model": "deepseek-flash-latest",
+          "type": "capability:effort_levels",
+          "from": [
+            "low",
+            "high",
+            "max"
+          ],
+          "to": [
+            "low",
+            "high",
+            "max",
+            "none"
+          ]
+        },
+        {
+          "model": "deepseek-pro-latest",
+          "type": "price_input",
+          "from": 0.225,
+          "to": 0.25
+        },
+        {
+          "model": "deepseek-pro-latest",
+          "type": "price_output",
+          "from": 8.0,
+          "to": 5.0
+        },
+        {
+          "model": "deepseek-pro-latest",
+          "type": "price_cached_input",
+          "from": 0.23,
+          "to": 0.249
+        },
+        {
+          "model": "deepseek-pro-latest",
+          "type": "max_output",
+          "from": 393216,
+          "to": 943718
+        },
+        {
+          "model": "deepseek-pro-latest",
+          "type": "capability:effort_levels",
+          "from": [
+            "low",
+            "high",
+            "max"
+          ],
+          "to": [
+            "low",
+            "high",
+            "max",
+            "none"
+          ]
+        },
+        {
+          "model": "deepseek-v4-1-flash",
+          "type": "price_input",
+          "from": 0.02376,
+          "to": 0.036
+        },
+        {
+          "model": "deepseek-v4-1-flash",
+          "type": "price_output",
+          "from": 0.72,
+          "to": 0.684
+        },
+        {
+          "model": "deepseek-v4-1-flash",
+          "type": "capability:effort_levels",
+          "from": [
+            "low",
+            "high",
+            "max"
+          ],
+          "to": [
+            "low",
+            "high",
+            "max",
+            "none"
+          ]
+        },
+        {
+          "model": "deepseek-v4-flash",
+          "type": "capability:effort_levels",
+          "from": [
+            "high",
+            "xhigh"
+          ],
+          "to": [
+            "high",
+            "xhigh",
+            "none"
+          ]
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "type": "price_input",
+          "from": 0.016,
+          "to": 0.0068
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "type": "price_output",
+          "from": 0.64,
+          "to": 1.28
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "type": "price_cached_input",
+          "from": 0.016,
+          "to": 0.0068
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "type": "capability:effort_levels",
+          "from": [
+            "low",
+            "high",
+            "max"
+          ],
+          "to": [
+            "low",
+            "high",
+            "max",
+            "none"
+          ]
+        },
+        {
+          "model": "deepseek-v4-flash-latest",
+          "type": "price_input",
+          "from": 0.0144,
+          "to": 0.0068
+        },
+        {
+          "model": "deepseek-v4-flash-latest",
+          "type": "price_output",
+          "from": 0.576,
+          "to": 1.28
+        },
+        {
+          "model": "deepseek-v4-flash-latest",
+          "type": "price_cached_input",
+          "from": 0.0108,
+          "to": 0.0068
+        },
+        {
+          "model": "deepseek-v4-flash-latest",
+          "type": "capability:effort_levels",
+          "from": [
+            "low",
+            "high",
+            "max"
+          ],
+          "to": [
+            "low",
+            "high",
+            "max",
+            "none"
+          ]
+        },
+        {
+          "model": "deepseek-v4-flash-vision-exp",
+          "type": "capability:effort_levels",
+          "from": [
+            "low",
+            "high",
+            "max"
+          ],
+          "to": [
+            "low",
+            "high",
+            "max",
+            "none"
+          ]
+        },
+        {
+          "model": "deepseek-v4-pro",
+          "type": "capability:effort_levels",
+          "from": [
+            "high",
+            "xhigh"
+          ],
+          "to": [
+            "high",
+            "xhigh",
+            "none"
+          ]
+        },
+        {
+          "model": "deepseek-v4-pro-0813",
+          "type": "capability:effort_levels",
+          "from": [
+            "low",
+            "high",
+            "max"
+          ],
+          "to": [
+            "low",
+            "high",
+            "max",
+            "none"
+          ]
+        },
+        {
+          "model": "ember-1",
+          "type": "capability:effort_levels",
+          "from": [
+            "low",
+            "high",
+            "max"
+          ],
+          "to": [
+            "low",
+            "high",
+            "max",
+            "none"
+          ]
+        },
+        {
+          "model": "gemini-3-1-flash-image",
+          "type": "capability:effort_levels",
+          "from": [
+            "high",
+            "minimal"
+          ],
+          "to": [
+            "high",
+            "minimal",
+            "none"
+          ]
+        },
+        {
+          "model": "gemini-3-1-flash-image-preview",
+          "type": "capability:effort_levels",
+          "from": [
+            "high",
+            "minimal"
+          ],
+          "to": [
+            "high",
+            "minimal",
+            "none"
+          ]
+        },
+        {
+          "model": "gemini-3-1-flash-lite",
+          "type": "capability:effort_levels",
+          "from": [
+            "low",
+            "medium",
+            "high",
+            "minimal"
+          ],
+          "to": [
+            "low",
+            "medium",
+            "high",
+            "minimal",
+            "none"
+          ]
+        },
+        {
+          "model": "gemini-3-1-flash-lite-image",
+          "type": "capability:effort_levels",
+          "from": [
+            "high",
+            "minimal"
+          ],
+          "to": [
+            "high",
+            "minimal",
+            "none"
+          ]
+        },
+        {
+          "model": "gemini-3-1-flash-lite-preview",
+          "type": "capability:effort_levels",
+          "from": [
+            "low",
+            "medium",
+            "high",
+            "minimal"
+          ],
+          "to": [
+            "low",
+            "medium",
+            "high",
+            "minimal",
+            "none"
+          ]
+        },
+        {
+          "model": "gemini-3-8-flash",
+          "type": "price_input",
+          "from": 0.75,
+          "to": 0.825
+        },
+        {
+          "model": "gemini-3-8-flash",
+          "type": "price_output",
+          "from": 3.75,
+          "to": 4.125
+        },
+        {
+          "model": "gemini-3-8-flash",
+          "type": "price_cached_input",
+          "from": 0.075,
+          "to": 0.0825
+        },
+        {
+          "model": "gemini-3-flash-preview",
+          "type": "capability:effort_levels",
+          "from": [
+            "low",
+            "medium",
+            "high",
+            "minimal"
+          ],
+          "to": [
+            "low",
+            "medium",
+            "high",
+            "minimal",
+            "none"
+          ]
+        },
+        {
+          "model": "gemini-nano-banana-2-1",
+          "type": "capability:effort_levels",
+          "from": [
+            "high",
+            "minimal"
+          ],
+          "to": [
+            "high",
+            "minimal",
+            "none"
+          ]
+        },
+        {
+          "model": "glm-5-2",
+          "type": "price_input",
+          "from": 0.02,
+          "to": 0.037
+        },
+        {
+          "model": "glm-5-2",
+          "type": "price_output",
+          "from": 7.0,
+          "to": 9.0
+        },
+        {
+          "model": "glm-5-2",
+          "type": "price_cached_input",
+          "from": 0.019,
+          "to": 0.036
+        },
+        {
+          "model": "glm-5-2",
+          "type": "capability:effort_levels",
+          "from": [
+            "high",
+            "xhigh"
+          ],
+          "to": [
+            "high",
+            "xhigh",
+            "none"
+          ]
+        },
+        {
+          "model": "glm-5-3",
+          "type": "price_input",
+          "from": 0.03,
+          "to": 0.079
+        },
+        {
+          "model": "glm-5-3",
+          "type": "price_cached_input",
+          "from": 0.029,
+          "to": 0.078
+        },
+        {
+          "model": "glm-5-3-flash",
+          "type": "price_input",
+          "from": 0.15,
+          "to": 0.0134
+        },
+        {
+          "model": "glm-5-3-flash",
+          "type": "price_output",
+          "from": 0.5,
+          "to": 0.8192
+        },
+        {
+          "model": "glm-5-3-flash",
+          "type": "price_cached_input",
+          "from": 0.03,
+          "to": 0.0125
+        },
+        {
+          "model": "glm-5-3-flash",
+          "type": "max_output",
+          "from": 943717,
+          "to": 131072
+        },
+        {
+          "model": "glm-flash-latest",
+          "type": "price_input",
+          "from": 0.036,
+          "to": 0.0134
+        },
+        {
+          "model": "glm-flash-latest",
+          "type": "price_output",
+          "from": 0.9,
+          "to": 0.8192
+        },
+        {
+          "model": "glm-flash-latest",
+          "type": "price_cached_input",
+          "from": 0.01125,
+          "to": 0.0125
+        },
+        {
+          "model": "glm-flash-latest",
+          "type": "max_output",
+          "from": 943718,
+          "to": 131072
+        },
+        {
+          "model": "glm-latest",
+          "type": "price_input",
+          "from": 0.024,
+          "to": 0.0608
+        },
+        {
+          "model": "glm-latest",
+          "type": "price_cached_input",
+          "from": 0.0223,
+          "to": 0.0565
+        },
+        {
+          "model": "kimi-k3",
+          "type": "price_input",
+          "from": 0.45,
+          "to": 0.304
+        },
+        {
+          "model": "kimi-k3",
+          "type": "price_output",
+          "from": 15.0,
+          "to": 11.936
+        },
+        {
+          "model": "kimi-k3",
+          "type": "price_cached_input",
+          "from": 0.28,
+          "to": 0.21
+        },
+        {
+          "model": "kimi-k3",
+          "type": "capability:effort_levels",
+          "from": [
+            "low",
+            "high",
+            "max"
+          ],
+          "to": [
+            "low",
+            "high",
+            "max",
+            "none"
+          ]
+        },
+        {
+          "model": "kimi-latest",
+          "type": "price_input",
+          "from": 0.3,
+          "to": 0.294
+        },
+        {
+          "model": "kimi-latest",
+          "type": "price_output",
+          "from": 14.0,
+          "to": 28.0
+        },
+        {
+          "model": "kimi-latest",
+          "type": "price_cached_input",
+          "from": 0.3,
+          "to": 0.284
+        },
+        {
+          "model": "kimi-latest",
+          "type": "capability:effort_levels",
+          "from": [
+            "low",
+            "high",
+            "max"
+          ],
+          "to": [
+            "low",
+            "high",
+            "max",
+            "none"
+          ]
+        },
+        {
+          "model": "llama-3-3-70b-instruct",
+          "type": "price_input",
+          "from": 0.59,
+          "to": 0.1
+        },
+        {
+          "model": "llama-3-3-70b-instruct",
+          "type": "price_output",
+          "from": 0.79,
+          "to": 0.32
+        },
+        {
+          "model": "llama-3-3-70b-instruct",
+          "type": "price_cached_input",
+          "from": 0.295,
+          "to": null
+        },
+        {
+          "model": "llama-3-3-70b-instruct",
+          "type": "max_output",
+          "from": 32768,
+          "to": 16384
+        },
+        {
+          "model": "mistral-small-3-2-24b-instruct",
+          "type": "price_input",
+          "from": 0.075,
+          "to": 0.09375
+        },
+        {
+          "model": "mistral-small-3-2-24b-instruct",
+          "type": "price_output",
+          "from": 0.2,
+          "to": 0.25
+        },
+        {
+          "model": "nemotron-3-super-120b-a12b",
+          "type": "capability:effort_levels",
+          "from": [
+            "low",
+            "medium"
+          ],
+          "to": [
+            "low",
+            "medium",
+            "none"
+          ]
+        },
+        {
+          "model": "nemotron-3-ultra-550b-a55b",
+          "type": "capability:effort_levels",
+          "from": [
+            "medium",
+            "high"
+          ],
+          "to": [
+            "medium",
+            "high",
+            "none"
+          ]
+        },
+        {
+          "model": "qwen3-6-27b",
+          "type": "price_input",
+          "from": 0.32,
+          "to": 0.25
+        },
+        {
+          "model": "qwen3-6-27b",
+          "type": "price_output",
+          "from": 3.2,
+          "to": 2.0
+        },
+        {
+          "model": "qwen3-6-27b",
+          "type": "price_cached_input",
+          "from": null,
+          "to": 0.025
+        },
+        {
+          "model": "qwen3-6-27b",
+          "type": "max_output",
+          "from": 81920,
+          "to": 65536
+        },
+        {
+          "model": "qwen3-8-27b",
+          "type": "capability:effort_levels",
+          "from": [
+            "low",
+            "medium",
+            "xhigh"
+          ],
+          "to": [
+            "low",
+            "medium",
+            "xhigh",
+            "none"
+          ]
+        },
+        {
+          "model": "qwen3-next-80b-a3b-instruct",
+          "type": "price_input",
+          "from": 0.1,
+          "to": 0.09
+        },
+        {
+          "model": "qwen3-next-80b-a3b-instruct",
+          "type": "price_cached_input",
+          "from": 0.07,
+          "to": null
+        },
+        {
+          "model": "qwen3-next-80b-a3b-instruct",
+          "type": "max_output",
+          "from": 235929,
+          "to": 16384
+        },
+        {
+          "model": "seed-2-0-code",
+          "type": "capability:effort_levels",
+          "from": [
+            "low",
+            "medium",
+            "high"
+          ],
+          "to": [
+            "low",
+            "medium",
+            "high",
+            "none"
+          ]
+        },
+        {
+          "model": "seed-2-0-lite",
+          "type": "capability:effort_levels",
+          "from": [
+            "low",
+            "medium",
+            "high",
+            "minimal"
+          ],
+          "to": [
+            "low",
+            "medium",
+            "high",
+            "minimal",
+            "none"
+          ]
+        },
+        {
+          "model": "seed-2-0-mini",
+          "type": "capability:effort_levels",
+          "from": [
+            "low",
+            "medium",
+            "high",
+            "minimal"
+          ],
+          "to": [
+            "low",
+            "medium",
+            "high",
+            "minimal",
+            "none"
+          ]
+        },
+        {
+          "model": "step-5-preview",
+          "type": "price_cached_input",
+          "from": 0.05,
+          "to": 0.1
+        },
+        {
+          "model": "ternary-bonsai-2-27b",
+          "type": "capability:effort_levels",
+          "from": [
+            "medium",
+            "xhigh"
+          ],
+          "to": [
+            "medium",
+            "xhigh",
+            "none"
+          ]
         }
       ]
     }
