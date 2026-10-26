@@ -1,9 +1,9 @@
 {
   "meta": {
-    "entries": 31,
+    "entries": 32,
     "first": "2026-10-08",
-    "latest": "2026-10-25T1123Z",
-    "total_changes": 901
+    "latest": "2026-10-26T1257Z",
+    "total_changes": 939
   },
   "entries": [
     {
@@ -5911,6 +5911,242 @@
           "type": "max_output",
           "from": 72000,
           "to": 117964
+        }
+      ]
+    },
+    {
+      "from": "2026-10-25T1123Z",
+      "to": "2026-10-26T1257Z",
+      "detected_at": "2026-10-26T12:57:38Z",
+      "count": 38,
+      "changes": [
+        {
+          "model": "deepseek-pro-latest",
+          "type": "price_input",
+          "from": 0.1188,
+          "to": 0.22968
+        },
+        {
+          "model": "deepseek-pro-latest",
+          "type": "price_output",
+          "from": 8.0,
+          "to": 0.68904
+        },
+        {
+          "model": "deepseek-pro-latest",
+          "type": "price_cached_input",
+          "from": 0.12,
+          "to": 0.007308
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "type": "price_input",
+          "from": 0.04444,
+          "to": 0.44
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "type": "price_output",
+          "from": 0.13332,
+          "to": 1.32
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "type": "price_cached_input",
+          "from": 0.001414,
+          "to": 0.014
+        },
+        {
+          "model": "deepseek-v4-flash-latest",
+          "type": "price_input",
+          "from": 0.0422,
+          "to": 0.0475
+        },
+        {
+          "model": "deepseek-v4-flash-latest",
+          "type": "price_output",
+          "from": 0.1694,
+          "to": 0.1568
+        },
+        {
+          "model": "deepseek-v4-pro",
+          "type": "price_input",
+          "from": 0.2088,
+          "to": 0.95526
+        },
+        {
+          "model": "deepseek-v4-pro",
+          "type": "price_output",
+          "from": 0.4176,
+          "to": 1.91052
+        },
+        {
+          "model": "deepseek-v4-pro",
+          "type": "price_cached_input",
+          "from": 0.0174,
+          "to": 0.079605
+        },
+        {
+          "model": "gemma-4-26b-a4b-it",
+          "type": "price_input",
+          "from": 0.0675,
+          "to": 0.09
+        },
+        {
+          "model": "gemma-4-26b-a4b-it",
+          "type": "price_output",
+          "from": 0.225,
+          "to": 0.3
+        },
+        {
+          "model": "gemma-4-26b-a4b-it",
+          "type": "price_cached_input",
+          "from": 0.0375,
+          "to": 0.05
+        },
+        {
+          "model": "glm-5-3",
+          "type": "price_input",
+          "from": 0.079,
+          "to": 0.0699
+        },
+        {
+          "model": "glm-5-3",
+          "type": "price_cached_input",
+          "from": 0.078,
+          "to": 0.0689
+        },
+        {
+          "model": "glm-flash-latest",
+          "type": "price_input",
+          "from": 0.0513,
+          "to": 0.0413
+        },
+        {
+          "model": "glm-flash-latest",
+          "type": "price_output",
+          "from": 0.0701,
+          "to": 0.0758
+        },
+        {
+          "model": "glm-latest",
+          "type": "price_input",
+          "from": 0.0703,
+          "to": 0.0699
+        },
+        {
+          "model": "glm-latest",
+          "type": "price_output",
+          "from": 4.3843,
+          "to": 1.4
+        },
+        {
+          "model": "glm-latest",
+          "type": "price_cached_input",
+          "from": 0.0703,
+          "to": 0.0689
+        },
+        {
+          "model": "glm-latest",
+          "type": "max_output",
+          "from": 131072,
+          "to": 943718
+        },
+        {
+          "model": "gpt-4-1-nano",
+          "type": "price_cached_input",
+          "from": 0.025,
+          "to": 0.03
+        },
+        {
+          "model": "gpt-4-1-nano",
+          "type": "max_output",
+          "from": 32768,
+          "to": 942818
+        },
+        {
+          "model": "kimi-k3",
+          "type": "price_input",
+          "from": 0.239,
+          "to": 0.161
+        },
+        {
+          "model": "kimi-k3",
+          "type": "price_output",
+          "from": 10.8,
+          "to": 20.0
+        },
+        {
+          "model": "kimi-k3",
+          "type": "price_cached_input",
+          "from": 0.21,
+          "to": 0.151
+        },
+        {
+          "model": "kimi-latest",
+          "type": "price_input",
+          "from": 0.18,
+          "to": 0.1529
+        },
+        {
+          "model": "kimi-latest",
+          "type": "price_output",
+          "from": 16.0,
+          "to": 9.3421
+        },
+        {
+          "model": "kimi-latest",
+          "type": "price_cached_input",
+          "from": 0.17,
+          "to": 0.15
+        },
+        {
+          "model": "qwen3-30b-a3b-instruct-2507",
+          "type": "price_input",
+          "from": 0.09,
+          "to": 0.1
+        },
+        {
+          "model": "qwen3-5-122b-a10b",
+          "type": "price_input",
+          "from": 0.4,
+          "to": 0.26
+        },
+        {
+          "model": "qwen3-5-122b-a10b",
+          "type": "price_output",
+          "from": 3.2,
+          "to": 2.08
+        },
+        {
+          "model": "qwen3-6-27b",
+          "type": "price_input",
+          "from": 0.25,
+          "to": 0.32
+        },
+        {
+          "model": "qwen3-6-27b",
+          "type": "price_output",
+          "from": 2.0,
+          "to": 3.2
+        },
+        {
+          "model": "qwen3-6-27b",
+          "type": "price_cached_input",
+          "from": 0.025,
+          "to": null
+        },
+        {
+          "model": "qwen3-6-27b",
+          "type": "max_output",
+          "from": 65536,
+          "to": 81920
+        },
+        {
+          "model": "trinity-large-thinking",
+          "type": "lifecycle_status",
+          "from": "ga",
+          "to": "retired"
         }
       ]
     }
