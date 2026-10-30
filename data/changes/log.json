@@ -1,9 +1,9 @@
 {
   "meta": {
-    "entries": 35,
+    "entries": 36,
     "first": "2026-10-08",
-    "latest": "2026-10-29T1257Z",
-    "total_changes": 1092
+    "latest": "2026-10-30T1251Z",
+    "total_changes": 1141
   },
   "entries": [
     {
@@ -7089,6 +7089,308 @@
           "type": "context_window",
           "from": 1048576,
           "to": 1000000
+        }
+      ]
+    },
+    {
+      "from": "2026-10-29T1257Z",
+      "to": "2026-10-30T1251Z",
+      "detected_at": "2026-10-30T12:51:09Z",
+      "count": 49,
+      "changes": [
+        {
+          "model": "solar-pro-3",
+          "type": "removed",
+          "from": "Solar Pro 3",
+          "to": null
+        },
+        {
+          "model": "deepseek-flash-latest",
+          "type": "price_input",
+          "from": 0.0233,
+          "to": 0.031
+        },
+        {
+          "model": "deepseek-flash-latest",
+          "type": "price_output",
+          "from": 1.8,
+          "to": 0.27
+        },
+        {
+          "model": "deepseek-flash-latest",
+          "type": "price_cached_input",
+          "from": 0.0231,
+          "to": 0.004
+        },
+        {
+          "model": "deepseek-pro-latest",
+          "type": "price_output",
+          "from": 8.0,
+          "to": 4.0
+        },
+        {
+          "model": "deepseek-v3-2",
+          "type": "price_input",
+          "from": 0.28,
+          "to": 0.26
+        },
+        {
+          "model": "deepseek-v3-2",
+          "type": "price_output",
+          "from": 0.42,
+          "to": 0.38
+        },
+        {
+          "model": "deepseek-v3-2",
+          "type": "price_cached_input",
+          "from": 0.028,
+          "to": 0.13
+        },
+        {
+          "model": "deepseek-v3-2",
+          "type": "max_output",
+          "from": 65536,
+          "to": 147456
+        },
+        {
+          "model": "deepseek-v4-flash-latest",
+          "type": "price_input",
+          "from": 0.05676,
+          "to": 0.0522
+        },
+        {
+          "model": "deepseek-v4-flash-latest",
+          "type": "price_output",
+          "from": 0.17028,
+          "to": 0.3
+        },
+        {
+          "model": "deepseek-v4-flash-latest",
+          "type": "price_cached_input",
+          "from": 0.001806,
+          "to": 0.0512
+        },
+        {
+          "model": "deepseek-v4-flash-latest",
+          "type": "max_output",
+          "from": 131072,
+          "to": 943718
+        },
+        {
+          "model": "deepseek-v4-pro",
+          "type": "price_input",
+          "from": 0.894012,
+          "to": 0.816234
+        },
+        {
+          "model": "deepseek-v4-pro",
+          "type": "price_output",
+          "from": 1.788024,
+          "to": 1.632468
+        },
+        {
+          "model": "deepseek-v4-pro",
+          "type": "price_cached_input",
+          "from": 0.074501,
+          "to": 0.068019
+        },
+        {
+          "model": "glm-4-6v",
+          "type": "price_cached_input",
+          "from": 0.05,
+          "to": 0.055
+        },
+        {
+          "model": "glm-5-3",
+          "type": "price_input",
+          "from": 0.0699,
+          "to": 0.08
+        },
+        {
+          "model": "glm-5-3",
+          "type": "price_output",
+          "from": 1.4,
+          "to": 3.6
+        },
+        {
+          "model": "glm-5-3",
+          "type": "price_cached_input",
+          "from": 0.0689,
+          "to": 0.076
+        },
+        {
+          "model": "glm-5-3-flash",
+          "type": "price_input",
+          "from": 0.0457,
+          "to": 0.15
+        },
+        {
+          "model": "glm-5-3-flash",
+          "type": "price_output",
+          "from": 0.0742,
+          "to": 0.5
+        },
+        {
+          "model": "glm-5-3-flash",
+          "type": "max_output",
+          "from": 131072,
+          "to": 943717
+        },
+        {
+          "model": "glm-flash-latest",
+          "type": "price_input",
+          "from": 0.0457,
+          "to": 0.0207
+        },
+        {
+          "model": "glm-flash-latest",
+          "type": "price_output",
+          "from": 0.0742,
+          "to": 0.0625
+        },
+        {
+          "model": "glm-flash-latest",
+          "type": "price_cached_input",
+          "from": 0.03,
+          "to": 0.0189
+        },
+        {
+          "model": "glm-flash-latest",
+          "type": "max_output",
+          "from": 131072,
+          "to": 943718
+        },
+        {
+          "model": "jev-router",
+          "type": "max_output",
+          "from": 64000,
+          "to": 65536
+        },
+        {
+          "model": "kimi-k2-7-code",
+          "type": "price_input",
+          "from": 0.56,
+          "to": 0.6
+        },
+        {
+          "model": "kimi-k2-7-code",
+          "type": "price_output",
+          "from": 3.1,
+          "to": 3.5
+        },
+        {
+          "model": "kimi-k3",
+          "type": "price_input",
+          "from": 0.239,
+          "to": 0.192
+        },
+        {
+          "model": "kimi-k3",
+          "type": "price_output",
+          "from": 10.8,
+          "to": 15.0
+        },
+        {
+          "model": "kimi-k3",
+          "type": "price_cached_input",
+          "from": 0.21,
+          "to": 0.182
+        },
+        {
+          "model": "kimi-latest",
+          "type": "price_input",
+          "from": 0.1824,
+          "to": 0.1615
+        },
+        {
+          "model": "kimi-latest",
+          "type": "price_output",
+          "from": 9.3388,
+          "to": 10.5572
+        },
+        {
+          "model": "kimi-latest",
+          "type": "price_cached_input",
+          "from": 0.18,
+          "to": 0.16
+        },
+        {
+          "model": "mistral-large-4-0",
+          "type": "price_input",
+          "from": 1.36,
+          "to": 0.7
+        },
+        {
+          "model": "mistral-large-4-0",
+          "type": "price_output",
+          "from": 4.18,
+          "to": 2.1
+        },
+        {
+          "model": "mistral-large-4-0",
+          "type": "price_cached_input",
+          "from": 0.14,
+          "to": 0.07
+        },
+        {
+          "model": "particle-1",
+          "type": "price_cached_input",
+          "from": 0.03,
+          "to": 0.003
+        },
+        {
+          "model": "qwen3-6-27b",
+          "type": "price_input",
+          "from": 0.45,
+          "to": 0.32
+        },
+        {
+          "model": "qwen3-6-27b",
+          "type": "price_output",
+          "from": 2.7,
+          "to": 3.2
+        },
+        {
+          "model": "qwen3-6-27b",
+          "type": "max_output",
+          "from": 65536,
+          "to": 81920
+        },
+        {
+          "model": "qwen3-8-2-4t-a95b",
+          "type": "max_output",
+          "from": 909000,
+          "to": 131072
+        },
+        {
+          "model": "qwen3-8-27b",
+          "type": "price_input",
+          "from": 0.039,
+          "to": 0.15
+        },
+        {
+          "model": "qwen3-8-27b",
+          "type": "price_output",
+          "from": 1.25,
+          "to": 1.875
+        },
+        {
+          "model": "qwen3-8-27b",
+          "type": "price_cached_input",
+          "from": 0.0039,
+          "to": 0.0375
+        },
+        {
+          "model": "qwen3-8-27b",
+          "type": "max_output",
+          "from": 65536,
+          "to": 235929
+        },
+        {
+          "model": "step-5-preview",
+          "type": "context_window",
+          "from": 1000000,
+          "to": 1048576
         }
       ]
     }
