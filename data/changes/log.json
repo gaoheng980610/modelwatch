@@ -1,9 +1,9 @@
 {
   "meta": {
-    "entries": 42,
+    "entries": 43,
     "first": "2026-10-08",
-    "latest": "2026-11-05T1436Z",
-    "total_changes": 1352
+    "latest": "2026-11-06T1413Z",
+    "total_changes": 1404
   },
   "entries": [
     {
@@ -8705,6 +8705,326 @@
           "type": "max_output",
           "from": 4096,
           "to": 8192
+        }
+      ]
+    },
+    {
+      "from": "2026-11-05T1436Z",
+      "to": "2026-11-06T1413Z",
+      "detected_at": "2026-11-06T14:13:43Z",
+      "count": 52,
+      "changes": [
+        {
+          "model": "gemini-omni-1-1-flash",
+          "type": "added",
+          "from": null,
+          "to": "Gemini Omni 1.1 Flash"
+        },
+        {
+          "model": "gemini-omni-1-2-flash",
+          "type": "added",
+          "from": null,
+          "to": "Gemini Omni 1.2 Flash"
+        },
+        {
+          "model": "beam-1-0-501b-a23b",
+          "type": "price_input",
+          "from": 0.25,
+          "to": 0.3
+        },
+        {
+          "model": "beam-1-0-501b-a23b",
+          "type": "price_cached_input",
+          "from": 0.05,
+          "to": 0.04
+        },
+        {
+          "model": "beam-1-0-501b-a23b",
+          "type": "max_output",
+          "from": 131072,
+          "to": 943718
+        },
+        {
+          "model": "deepseek-chat",
+          "type": "price_input",
+          "from": 0.2574,
+          "to": 0.32
+        },
+        {
+          "model": "deepseek-chat",
+          "type": "price_output",
+          "from": 1.0287,
+          "to": 0.89
+        },
+        {
+          "model": "deepseek-chat",
+          "type": "max_output",
+          "from": 16000,
+          "to": 16384
+        },
+        {
+          "model": "deepseek-pro-latest",
+          "type": "price_input",
+          "from": 0.0927,
+          "to": 0.0999
+        },
+        {
+          "model": "deepseek-pro-latest",
+          "type": "price_cached_input",
+          "from": 0.0927,
+          "to": 0.0999
+        },
+        {
+          "model": "deepseek-v4-1-flash",
+          "type": "price_input",
+          "from": 0.045,
+          "to": 0.051
+        },
+        {
+          "model": "deepseek-v4-1-flash",
+          "type": "price_output",
+          "from": 0.5,
+          "to": 0.567
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "type": "price_input",
+          "from": 0.054,
+          "to": 0.0566
+        },
+        {
+          "model": "deepseek-v4-flash-latest",
+          "type": "price_input",
+          "from": 0.054,
+          "to": 0.05632
+        },
+        {
+          "model": "deepseek-v4-flash-latest",
+          "type": "price_output",
+          "from": 0.3,
+          "to": 0.16896
+        },
+        {
+          "model": "deepseek-v4-flash-latest",
+          "type": "price_cached_input",
+          "from": 0.035,
+          "to": 0.001792
+        },
+        {
+          "model": "deepseek-v4-flash-latest",
+          "type": "max_output",
+          "from": 943718,
+          "to": 131072
+        },
+        {
+          "model": "deepseek-v4-flash-vision-exp",
+          "type": "price_input",
+          "from": 0.2156,
+          "to": 0.44
+        },
+        {
+          "model": "deepseek-v4-flash-vision-exp",
+          "type": "price_output",
+          "from": 0.6468,
+          "to": 1.32
+        },
+        {
+          "model": "deepseek-v4-flash-vision-exp",
+          "type": "price_cached_input",
+          "from": 0.00686,
+          "to": 0.014
+        },
+        {
+          "model": "deepseek-v4-flash-vision-exp",
+          "type": "max_output",
+          "from": 262144,
+          "to": 943717
+        },
+        {
+          "model": "deepseek-v4-pro",
+          "type": "price_input",
+          "from": 1.6,
+          "to": 0.888966
+        },
+        {
+          "model": "deepseek-v4-pro",
+          "type": "price_output",
+          "from": 3.2,
+          "to": 1.777932
+        },
+        {
+          "model": "deepseek-v4-pro",
+          "type": "price_cached_input",
+          "from": 0.135,
+          "to": 0.07408
+        },
+        {
+          "model": "deepseek-v4-pro",
+          "type": "max_output",
+          "from": 393216,
+          "to": 384000
+        },
+        {
+          "model": "deepseek-v4-pro-0813",
+          "type": "price_input",
+          "from": 0.103,
+          "to": 0.1165
+        },
+        {
+          "model": "deepseek-v4-pro-0813",
+          "type": "price_output",
+          "from": 4.11,
+          "to": 4.66
+        },
+        {
+          "model": "deepseek-v4-pro-0813",
+          "type": "price_cached_input",
+          "from": 0.098,
+          "to": 0.111
+        },
+        {
+          "model": "gemma-4-26b-a4b-it",
+          "type": "price_input",
+          "from": 0.017,
+          "to": 0.09
+        },
+        {
+          "model": "gemma-4-26b-a4b-it",
+          "type": "price_output",
+          "from": 0.052,
+          "to": 0.3
+        },
+        {
+          "model": "gemma-4-26b-a4b-it",
+          "type": "price_cached_input",
+          "from": 0.009,
+          "to": 0.05
+        },
+        {
+          "model": "gemma-4-26b-a4b-it",
+          "type": "max_output",
+          "from": 32768,
+          "to": 235929
+        },
+        {
+          "model": "glm-flash-latest",
+          "type": "price_input",
+          "from": 0.0285,
+          "to": 0.0284
+        },
+        {
+          "model": "glm-flash-latest",
+          "type": "price_cached_input",
+          "from": 0.0285,
+          "to": 0.0284
+        },
+        {
+          "model": "gpt-oss-120b",
+          "type": "price_input",
+          "from": 0.15,
+          "to": 0.026
+        },
+        {
+          "model": "gpt-oss-120b",
+          "type": "price_output",
+          "from": 0.6,
+          "to": 0.096
+        },
+        {
+          "model": "gpt-oss-120b",
+          "type": "price_cached_input",
+          "from": 0.075,
+          "to": 0.023
+        },
+        {
+          "model": "kimi-k2-5",
+          "type": "price_input",
+          "from": 0.5,
+          "to": 0.532
+        },
+        {
+          "model": "kimi-k2-5",
+          "type": "price_output",
+          "from": 2.5,
+          "to": 3.325
+        },
+        {
+          "model": "kimi-k2-5",
+          "type": "price_cached_input",
+          "from": 0.15,
+          "to": 0.209
+        },
+        {
+          "model": "kimi-k2-5",
+          "type": "max_output",
+          "from": 235929,
+          "to": 65536
+        },
+        {
+          "model": "kimi-latest",
+          "type": "price_input",
+          "from": 0.1577,
+          "to": 0.1719
+        },
+        {
+          "model": "kimi-latest",
+          "type": "price_output",
+          "from": 9.3388,
+          "to": 9.7471
+        },
+        {
+          "model": "kimi-latest",
+          "type": "price_cached_input",
+          "from": 0.15,
+          "to": 0.17
+        },
+        {
+          "model": "llama-3-3-70b-instruct",
+          "type": "price_input",
+          "from": 0.2,
+          "to": 0.59
+        },
+        {
+          "model": "llama-3-3-70b-instruct",
+          "type": "price_output",
+          "from": 0.52,
+          "to": 0.79
+        },
+        {
+          "model": "llama-3-3-70b-instruct",
+          "type": "price_cached_input",
+          "from": 0.1,
+          "to": 0.295
+        },
+        {
+          "model": "llama-3-3-70b-instruct",
+          "type": "max_output",
+          "from": 128000,
+          "to": 32768
+        },
+        {
+          "model": "nemotron-3-super-120b-a12b",
+          "type": "price_input",
+          "from": 0.3,
+          "to": 0.075
+        },
+        {
+          "model": "nemotron-3-super-120b-a12b",
+          "type": "price_output",
+          "from": 2.4,
+          "to": 0.4
+        },
+        {
+          "model": "nemotron-3-super-120b-a12b",
+          "type": "price_cached_input",
+          "from": 0.15,
+          "to": null
+        },
+        {
+          "model": "nemotron-3-super-120b-a12b",
+          "type": "max_output",
+          "from": 262144,
+          "to": 16384
         }
       ]
     }
