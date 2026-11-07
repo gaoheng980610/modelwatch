@@ -1,9 +1,9 @@
 {
   "meta": {
-    "entries": 43,
+    "entries": 44,
     "first": "2026-10-08",
-    "latest": "2026-11-06T1413Z",
-    "total_changes": 1404
+    "latest": "2026-11-07T1256Z",
+    "total_changes": 1439
   },
   "entries": [
     {
@@ -9025,6 +9025,224 @@
           "type": "max_output",
           "from": 262144,
           "to": 16384
+        }
+      ]
+    },
+    {
+      "from": "2026-11-06T1413Z",
+      "to": "2026-11-07T1256Z",
+      "detected_at": "2026-11-07T12:56:56Z",
+      "count": 35,
+      "changes": [
+        {
+          "model": "lfm-3-1-7b",
+          "type": "added",
+          "from": null,
+          "to": "LFM3-1.7B"
+        },
+        {
+          "model": "command-a",
+          "type": "capability:tool_use",
+          "from": false,
+          "to": true
+        },
+        {
+          "model": "command-r7b-12-2024",
+          "type": "capability:tool_use",
+          "from": false,
+          "to": true
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "type": "price_input",
+          "from": 0.0566,
+          "to": 0.0474
+        },
+        {
+          "model": "deepseek-v4-flash-latest",
+          "type": "price_input",
+          "from": 0.05632,
+          "to": 0.0474
+        },
+        {
+          "model": "deepseek-v4-flash-latest",
+          "type": "price_output",
+          "from": 0.16896,
+          "to": 0.3
+        },
+        {
+          "model": "deepseek-v4-flash-latest",
+          "type": "price_cached_input",
+          "from": 0.001792,
+          "to": 0.035
+        },
+        {
+          "model": "deepseek-v4-flash-latest",
+          "type": "max_output",
+          "from": 131072,
+          "to": 943718
+        },
+        {
+          "model": "deepseek-v4-pro",
+          "type": "price_input",
+          "from": 0.888966,
+          "to": 0.717924
+        },
+        {
+          "model": "deepseek-v4-pro",
+          "type": "price_output",
+          "from": 1.777932,
+          "to": 1.435848
+        },
+        {
+          "model": "deepseek-v4-pro",
+          "type": "price_cached_input",
+          "from": 0.07408,
+          "to": 0.059827
+        },
+        {
+          "model": "gemma-4-26b-a4b-it",
+          "type": "price_input",
+          "from": 0.09,
+          "to": 0.0675
+        },
+        {
+          "model": "gemma-4-26b-a4b-it",
+          "type": "price_output",
+          "from": 0.3,
+          "to": 0.225
+        },
+        {
+          "model": "gemma-4-26b-a4b-it",
+          "type": "price_cached_input",
+          "from": 0.05,
+          "to": 0.0375
+        },
+        {
+          "model": "glm-flash-latest",
+          "type": "price_input",
+          "from": 0.0284,
+          "to": 0.0285
+        },
+        {
+          "model": "glm-flash-latest",
+          "type": "price_cached_input",
+          "from": 0.0284,
+          "to": 0.0285
+        },
+        {
+          "model": "gpt-oss-120b",
+          "type": "price_input",
+          "from": 0.026,
+          "to": 0.017
+        },
+        {
+          "model": "gpt-oss-120b",
+          "type": "price_output",
+          "from": 0.096,
+          "to": 0.064
+        },
+        {
+          "model": "gpt-oss-120b",
+          "type": "price_cached_input",
+          "from": 0.023,
+          "to": 0.016
+        },
+        {
+          "model": "kimi-k2-5",
+          "type": "price_input",
+          "from": 0.532,
+          "to": 0.5
+        },
+        {
+          "model": "kimi-k2-5",
+          "type": "price_output",
+          "from": 3.325,
+          "to": 2.5
+        },
+        {
+          "model": "kimi-k2-5",
+          "type": "price_cached_input",
+          "from": 0.209,
+          "to": 0.15
+        },
+        {
+          "model": "kimi-k2-5",
+          "type": "max_output",
+          "from": 65536,
+          "to": 235929
+        },
+        {
+          "model": "kimi-latest",
+          "type": "price_input",
+          "from": 0.1719,
+          "to": 0.1548
+        },
+        {
+          "model": "kimi-latest",
+          "type": "price_cached_input",
+          "from": 0.17,
+          "to": 0.15
+        },
+        {
+          "model": "ling-3-1-flash",
+          "type": "price_input",
+          "from": 0.075,
+          "to": 0.045
+        },
+        {
+          "model": "ling-3-1-flash",
+          "type": "price_output",
+          "from": 0.225,
+          "to": 0.135
+        },
+        {
+          "model": "ling-3-1-flash",
+          "type": "price_cached_input",
+          "from": 0.015,
+          "to": 0.009
+        },
+        {
+          "model": "magnum-v4-72b",
+          "type": "price_cached_input",
+          "from": null,
+          "to": 2.5
+        },
+        {
+          "model": "minimax-m2-5",
+          "type": "price_input",
+          "from": 0.27,
+          "to": 0.3
+        },
+        {
+          "model": "minimax-m2-5",
+          "type": "price_output",
+          "from": 0.95,
+          "to": 1.2
+        },
+        {
+          "model": "minimax-m2-5",
+          "type": "price_cached_input",
+          "from": 0.03,
+          "to": 0.06
+        },
+        {
+          "model": "minimax-m2-5",
+          "type": "max_output",
+          "from": 32768,
+          "to": 58982
+        },
+        {
+          "model": "remm-slerp-l2-13b",
+          "type": "price_cached_input",
+          "from": null,
+          "to": 0.35
+        },
+        {
+          "model": "weaver",
+          "type": "price_cached_input",
+          "from": null,
+          "to": 0.4
         }
       ]
     }
