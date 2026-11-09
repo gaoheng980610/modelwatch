@@ -1,9 +1,9 @@
 {
   "meta": {
-    "entries": 45,
+    "entries": 46,
     "first": "2026-10-08",
-    "latest": "2026-11-08T1320Z",
-    "total_changes": 1478
+    "latest": "2026-11-09T1613Z",
+    "total_changes": 1524
   },
   "entries": [
     {
@@ -9485,6 +9485,290 @@
           "type": "max_output",
           "from": 65536,
           "to": 81920
+        }
+      ]
+    },
+    {
+      "from": "2026-11-08T1320Z",
+      "to": "2026-11-09T1613Z",
+      "detected_at": "2026-11-09T16:13:16Z",
+      "count": 46,
+      "changes": [
+        {
+          "model": "minimax-m1",
+          "type": "removed",
+          "from": "MiniMax M1",
+          "to": null
+        },
+        {
+          "model": "deepseek-v4-1-flash",
+          "type": "price_output",
+          "from": 0.41,
+          "to": 0.567
+        },
+        {
+          "model": "deepseek-v4-1-flash",
+          "type": "price_cached_input",
+          "from": 0.022,
+          "to": 0.018
+        },
+        {
+          "model": "deepseek-v4-pro",
+          "type": "price_input",
+          "from": 0.241338,
+          "to": 0.894012
+        },
+        {
+          "model": "deepseek-v4-pro",
+          "type": "price_output",
+          "from": 0.482676,
+          "to": 1.788024
+        },
+        {
+          "model": "deepseek-v4-pro",
+          "type": "price_cached_input",
+          "from": 0.020112,
+          "to": 0.074501
+        },
+        {
+          "model": "gemma-3-27b-it",
+          "type": "price_output",
+          "from": 0.35,
+          "to": 0.45
+        },
+        {
+          "model": "gemma-4-26b-a4b-it",
+          "type": "price_input",
+          "from": 0.0675,
+          "to": 0.09
+        },
+        {
+          "model": "gemma-4-26b-a4b-it",
+          "type": "price_output",
+          "from": 0.225,
+          "to": 0.3
+        },
+        {
+          "model": "gemma-4-26b-a4b-it",
+          "type": "price_cached_input",
+          "from": 0.0375,
+          "to": 0.05
+        },
+        {
+          "model": "glm-4-5-air",
+          "type": "price_input",
+          "from": 0.13,
+          "to": 0.2
+        },
+        {
+          "model": "glm-4-5-air",
+          "type": "price_output",
+          "from": 0.85,
+          "to": 1.1
+        },
+        {
+          "model": "glm-4-5-air",
+          "type": "price_cached_input",
+          "from": 0.025,
+          "to": 0.03
+        },
+        {
+          "model": "glm-5-2",
+          "type": "price_input",
+          "from": 0.006,
+          "to": 0.0075
+        },
+        {
+          "model": "gpt-oss-120b",
+          "type": "price_input",
+          "from": 0.025,
+          "to": 0.15
+        },
+        {
+          "model": "gpt-oss-120b",
+          "type": "price_output",
+          "from": 0.094,
+          "to": 0.6
+        },
+        {
+          "model": "gpt-oss-120b",
+          "type": "price_cached_input",
+          "from": 0.023,
+          "to": 0.075
+        },
+        {
+          "model": "hy3",
+          "type": "price_input",
+          "from": 0.132,
+          "to": 0.0825
+        },
+        {
+          "model": "hy3",
+          "type": "price_output",
+          "from": 0.528,
+          "to": 0.33
+        },
+        {
+          "model": "hy3",
+          "type": "price_cached_input",
+          "from": 0.033,
+          "to": 0.020625
+        },
+        {
+          "model": "hy4-preview",
+          "type": "price_input",
+          "from": 0.834,
+          "to": 0.7506
+        },
+        {
+          "model": "hy4-preview",
+          "type": "price_output",
+          "from": 2.501,
+          "to": 2.2509
+        },
+        {
+          "model": "hy4-preview",
+          "type": "price_cached_input",
+          "from": 0.042,
+          "to": 0.0378
+        },
+        {
+          "model": "jev-router",
+          "type": "max_output",
+          "from": 65536,
+          "to": 64000
+        },
+        {
+          "model": "kimi-latest",
+          "type": "price_input",
+          "from": 0.1605,
+          "to": 0.1539
+        },
+        {
+          "model": "kimi-latest",
+          "type": "price_output",
+          "from": 9.3388,
+          "to": 10.1489
+        },
+        {
+          "model": "kimi-latest",
+          "type": "price_cached_input",
+          "from": 0.16,
+          "to": 0.15
+        },
+        {
+          "model": "llama-3-1-8b-instruct",
+          "type": "price_input",
+          "from": 0.05,
+          "to": 0.02
+        },
+        {
+          "model": "llama-3-1-8b-instruct",
+          "type": "price_output",
+          "from": 0.08,
+          "to": 0.04
+        },
+        {
+          "model": "llama-3-1-8b-instruct",
+          "type": "price_cached_input",
+          "from": 0.025,
+          "to": null
+        },
+        {
+          "model": "llama-3-1-8b-instruct",
+          "type": "max_output",
+          "from": 117964,
+          "to": 16384
+        },
+        {
+          "model": "mimo-v2-5-pro",
+          "type": "context_window",
+          "from": 1050000,
+          "to": 1024000
+        },
+        {
+          "model": "minimax-m2-5",
+          "type": "context_window",
+          "from": 204800,
+          "to": 200000
+        },
+        {
+          "model": "minimax-m2-7",
+          "type": "context_window",
+          "from": 204800,
+          "to": 196608
+        },
+        {
+          "model": "minimax-m3-1-flash",
+          "type": "price_input",
+          "from": 0.15,
+          "to": 0.075
+        },
+        {
+          "model": "minimax-m3-1-flash",
+          "type": "price_output",
+          "from": 0.6,
+          "to": 0.3
+        },
+        {
+          "model": "minimax-m3-1-flash",
+          "type": "price_cached_input",
+          "from": 0.015,
+          "to": 0.0075
+        },
+        {
+          "model": "mistral-small-3-2-24b-instruct",
+          "type": "price_input",
+          "from": 0.075,
+          "to": 0.1
+        },
+        {
+          "model": "mistral-small-3-2-24b-instruct",
+          "type": "price_output",
+          "from": 0.2,
+          "to": 0.3
+        },
+        {
+          "model": "mistral-small-3-2-24b-instruct",
+          "type": "price_cached_input",
+          "from": null,
+          "to": 0.01
+        },
+        {
+          "model": "mistral-small-3-2-24b-instruct",
+          "type": "max_output",
+          "from": 16384,
+          "to": 26214
+        },
+        {
+          "model": "muse-spark-open",
+          "type": "max_output",
+          "from": 943718,
+          "to": 131072
+        },
+        {
+          "model": "qwen3-5-397b-a17b",
+          "type": "price_input",
+          "from": 0.5,
+          "to": 0.6
+        },
+        {
+          "model": "qwen3-5-397b-a17b",
+          "type": "price_cached_input",
+          "from": 0.3,
+          "to": 0.12
+        },
+        {
+          "model": "qwen3-5-397b-a17b",
+          "type": "max_output",
+          "from": 235929,
+          "to": 64000
+        },
+        {
+          "model": "step-5-preview",
+          "type": "context_window",
+          "from": 1048576,
+          "to": 1000000
         }
       ]
     }
