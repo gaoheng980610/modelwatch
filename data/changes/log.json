@@ -1,9 +1,9 @@
 {
   "meta": {
-    "entries": 59,
+    "entries": 60,
     "first": "2026-10-08",
-    "latest": "2026-11-22T1431Z",
-    "total_changes": 2034
+    "latest": "2026-11-23T1801Z",
+    "total_changes": 2074
   },
   "entries": [
     {
@@ -12954,6 +12954,254 @@
           "type": "max_output",
           "from": 235929,
           "to": 131072
+        }
+      ]
+    },
+    {
+      "from": "2026-11-22T1431Z",
+      "to": "2026-11-23T1801Z",
+      "detected_at": "2026-11-23T18:01:29Z",
+      "count": 40,
+      "changes": [
+        {
+          "model": "deepseek-flash-latest",
+          "type": "price_input",
+          "from": 0.036,
+          "to": 0.03
+        },
+        {
+          "model": "deepseek-flash-latest",
+          "type": "price_output",
+          "from": 0.5,
+          "to": 0.2
+        },
+        {
+          "model": "deepseek-flash-latest",
+          "type": "price_cached_input",
+          "from": 0.01,
+          "to": 0.001
+        },
+        {
+          "model": "deepseek-flash-latest",
+          "type": "max_output",
+          "from": 943718,
+          "to": 393216
+        },
+        {
+          "model": "deepseek-pro-latest",
+          "type": "price_input",
+          "from": 0.1188,
+          "to": 0.0999
+        },
+        {
+          "model": "deepseek-pro-latest",
+          "type": "price_output",
+          "from": 8.0,
+          "to": 5.0
+        },
+        {
+          "model": "deepseek-pro-latest",
+          "type": "price_cached_input",
+          "from": 0.12,
+          "to": 0.0999
+        },
+        {
+          "model": "deepseek-v4-1-flash-1017",
+          "type": "price_input",
+          "from": 0.15,
+          "to": 0.03
+        },
+        {
+          "model": "deepseek-v4-1-flash-1017",
+          "type": "price_output",
+          "from": 0.6,
+          "to": 0.2
+        },
+        {
+          "model": "deepseek-v4-1-flash-1017",
+          "type": "price_cached_input",
+          "from": 0.003,
+          "to": 0.001
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "type": "price_input",
+          "from": 0.0443,
+          "to": 0.0434
+        },
+        {
+          "model": "deepseek-v4-flash-latest",
+          "type": "price_input",
+          "from": 0.044,
+          "to": 0.0434
+        },
+        {
+          "model": "deepseek-v4-flash-latest",
+          "type": "price_output",
+          "from": 0.132,
+          "to": 0.3
+        },
+        {
+          "model": "deepseek-v4-flash-latest",
+          "type": "price_cached_input",
+          "from": 0.0014,
+          "to": 0.035
+        },
+        {
+          "model": "deepseek-v4-flash-latest",
+          "type": "max_output",
+          "from": 131072,
+          "to": 943718
+        },
+        {
+          "model": "gemma-3-27b-it",
+          "type": "price_output",
+          "from": 0.45,
+          "to": 0.16
+        },
+        {
+          "model": "gemma-3-27b-it",
+          "type": "price_cached_input",
+          "from": 0.04,
+          "to": null
+        },
+        {
+          "model": "gemma-3-27b-it",
+          "type": "max_output",
+          "from": 117964,
+          "to": 16384
+        },
+        {
+          "model": "gemma-4-26b-a4b-it",
+          "type": "price_input",
+          "from": 0.0675,
+          "to": 0.09
+        },
+        {
+          "model": "gemma-4-26b-a4b-it",
+          "type": "price_output",
+          "from": 0.225,
+          "to": 0.3
+        },
+        {
+          "model": "gemma-4-26b-a4b-it",
+          "type": "price_cached_input",
+          "from": 0.0375,
+          "to": 0.05
+        },
+        {
+          "model": "glm-5-3-flash",
+          "type": "price_output",
+          "from": 0.0784,
+          "to": 0.074
+        },
+        {
+          "model": "glm-flash-latest",
+          "type": "price_output",
+          "from": 0.0784,
+          "to": 0.074
+        },
+        {
+          "model": "gpt-oss-120b",
+          "type": "price_input",
+          "from": 0.09,
+          "to": 0.05
+        },
+        {
+          "model": "gpt-oss-120b",
+          "type": "price_output",
+          "from": 0.36,
+          "to": 0.25
+        },
+        {
+          "model": "gpt-oss-120b",
+          "type": "price_cached_input",
+          "from": null,
+          "to": 0.05
+        },
+        {
+          "model": "gpt-oss-20b",
+          "type": "price_input",
+          "from": 0.075,
+          "to": 0.03
+        },
+        {
+          "model": "gpt-oss-20b",
+          "type": "price_output",
+          "from": 0.3,
+          "to": 0.13
+        },
+        {
+          "model": "gpt-oss-20b",
+          "type": "price_cached_input",
+          "from": 0.0375,
+          "to": 0.03
+        },
+        {
+          "model": "gpt-oss-20b",
+          "type": "max_output",
+          "from": 65536,
+          "to": 117964
+        },
+        {
+          "model": "hy4-preview",
+          "type": "price_input",
+          "from": 0.834,
+          "to": 0.7506
+        },
+        {
+          "model": "hy4-preview",
+          "type": "price_output",
+          "from": 2.501,
+          "to": 2.2509
+        },
+        {
+          "model": "hy4-preview",
+          "type": "price_cached_input",
+          "from": 0.042,
+          "to": 0.0378
+        },
+        {
+          "model": "ling-3-1-flash",
+          "type": "context_window",
+          "from": 1000000,
+          "to": 1048576
+        },
+        {
+          "model": "ling-3-1-flash",
+          "type": "capability:structured_outputs",
+          "from": false,
+          "to": true
+        },
+        {
+          "model": "minimax-m3-1-flash",
+          "type": "price_input",
+          "from": 0.15,
+          "to": 0.075
+        },
+        {
+          "model": "minimax-m3-1-flash",
+          "type": "price_output",
+          "from": 0.6,
+          "to": 0.3
+        },
+        {
+          "model": "minimax-m3-1-flash",
+          "type": "price_cached_input",
+          "from": 0.015,
+          "to": 0.0075
+        },
+        {
+          "model": "qwen3-6-35b-a3b",
+          "type": "price_input",
+          "from": 0.1,
+          "to": 0.05
+        },
+        {
+          "model": "qwen3-6-35b-a3b",
+          "type": "price_output",
+          "from": 0.9,
+          "to": 0.7
         }
       ]
     }
