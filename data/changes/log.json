@@ -1,9 +1,9 @@
 {
   "meta": {
-    "entries": 60,
+    "entries": 61,
     "first": "2026-10-08",
-    "latest": "2026-11-23T1801Z",
-    "total_changes": 2074
+    "latest": "2026-11-24T1739Z",
+    "total_changes": 2118
   },
   "entries": [
     {
@@ -13202,6 +13202,278 @@
           "type": "price_output",
           "from": 0.9,
           "to": 0.7
+        }
+      ]
+    },
+    {
+      "from": "2026-11-23T1801Z",
+      "to": "2026-11-24T1739Z",
+      "detected_at": "2026-11-24T17:39:06Z",
+      "count": 44,
+      "changes": [
+        {
+          "model": "kimi-k2",
+          "type": "removed",
+          "from": "Kimi K2 0711",
+          "to": null
+        },
+        {
+          "model": "kimi-k2-0905",
+          "type": "removed",
+          "from": "Kimi K2 0905",
+          "to": null
+        },
+        {
+          "model": "kimi-k2-thinking",
+          "type": "removed",
+          "from": "Kimi K2 Thinking",
+          "to": null
+        },
+        {
+          "model": "mimo-v2-5-pro",
+          "type": "removed",
+          "from": "MiMo-V2.5-Pro",
+          "to": null
+        },
+        {
+          "model": "mistral-medium-3",
+          "type": "removed",
+          "from": "Mistral Medium 3",
+          "to": null
+        },
+        {
+          "model": "mistral-medium-3-1",
+          "type": "removed",
+          "from": "Mistral Medium 3.1",
+          "to": null
+        },
+        {
+          "model": "deepseek-v4-1-flash",
+          "type": "price_input",
+          "from": 0.0498,
+          "to": 0.0507
+        },
+        {
+          "model": "deepseek-v4-1-flash",
+          "type": "price_output",
+          "from": 0.1992,
+          "to": 0.2028
+        },
+        {
+          "model": "deepseek-v4-1-flash",
+          "type": "price_cached_input",
+          "from": 0.000996,
+          "to": 0.001014
+        },
+        {
+          "model": "deepseek-v4-flash-0731",
+          "type": "price_input",
+          "from": 0.0434,
+          "to": 0.0456
+        },
+        {
+          "model": "deepseek-v4-flash-latest",
+          "type": "price_input",
+          "from": 0.0434,
+          "to": 0.04532
+        },
+        {
+          "model": "deepseek-v4-flash-latest",
+          "type": "price_output",
+          "from": 0.3,
+          "to": 0.13596
+        },
+        {
+          "model": "deepseek-v4-flash-latest",
+          "type": "price_cached_input",
+          "from": 0.035,
+          "to": 0.001442
+        },
+        {
+          "model": "deepseek-v4-flash-latest",
+          "type": "max_output",
+          "from": 943718,
+          "to": 131072
+        },
+        {
+          "model": "deepseek-v4-pro",
+          "type": "price_input",
+          "from": 0.9,
+          "to": 1.28
+        },
+        {
+          "model": "deepseek-v4-pro",
+          "type": "price_output",
+          "from": 1.5,
+          "to": 2.56
+        },
+        {
+          "model": "deepseek-v4-pro",
+          "type": "price_cached_input",
+          "from": 0.2,
+          "to": 0.108
+        },
+        {
+          "model": "deepseek-v4-pro-0813",
+          "type": "price_input",
+          "from": 1.32,
+          "to": 0.111
+        },
+        {
+          "model": "deepseek-v4-pro-0813",
+          "type": "price_output",
+          "from": 3.96,
+          "to": 4.44
+        },
+        {
+          "model": "deepseek-v4-pro-0813",
+          "type": "price_cached_input",
+          "from": 0.044,
+          "to": 0.097
+        },
+        {
+          "model": "glm-5-3-flash",
+          "type": "price_input",
+          "from": 0.0399,
+          "to": 0.15
+        },
+        {
+          "model": "glm-5-3-flash",
+          "type": "price_output",
+          "from": 0.074,
+          "to": 0.5
+        },
+        {
+          "model": "glm-5-3-flash",
+          "type": "max_output",
+          "from": 131072,
+          "to": 943717
+        },
+        {
+          "model": "glm-flash-latest",
+          "type": "price_input",
+          "from": 0.0399,
+          "to": 0.0356
+        },
+        {
+          "model": "glm-flash-latest",
+          "type": "price_output",
+          "from": 0.074,
+          "to": 0.0815
+        },
+        {
+          "model": "hy3",
+          "type": "price_input",
+          "from": 0.14,
+          "to": 0.0825
+        },
+        {
+          "model": "hy3",
+          "type": "price_output",
+          "from": 0.58,
+          "to": 0.33
+        },
+        {
+          "model": "hy3",
+          "type": "price_cached_input",
+          "from": 0.035,
+          "to": 0.020625
+        },
+        {
+          "model": "hy3",
+          "type": "max_output",
+          "from": 235929,
+          "to": 128000
+        },
+        {
+          "model": "inkling",
+          "type": "context_window",
+          "from": 524288,
+          "to": 1048576
+        },
+        {
+          "model": "ling-3-1-flash",
+          "type": "price_input",
+          "from": 0.06,
+          "to": 0.075
+        },
+        {
+          "model": "ling-3-1-flash",
+          "type": "price_output",
+          "from": 0.18,
+          "to": 0.225
+        },
+        {
+          "model": "ling-3-1-flash",
+          "type": "price_cached_input",
+          "from": 0.012,
+          "to": 0.015
+        },
+        {
+          "model": "llama-3-1-8b-instruct",
+          "type": "price_input",
+          "from": 0.02,
+          "to": 0.05
+        },
+        {
+          "model": "llama-3-1-8b-instruct",
+          "type": "price_output",
+          "from": 0.04,
+          "to": 0.08
+        },
+        {
+          "model": "llama-3-1-8b-instruct",
+          "type": "price_cached_input",
+          "from": null,
+          "to": 0.025
+        },
+        {
+          "model": "llama-3-1-8b-instruct",
+          "type": "max_output",
+          "from": 16384,
+          "to": 117964
+        },
+        {
+          "model": "nemotron-3-5-lightning",
+          "type": "price_input",
+          "from": 0.07,
+          "to": 0.05
+        },
+        {
+          "model": "nemotron-3-5-lightning",
+          "type": "price_cached_input",
+          "from": 0.04,
+          "to": 0.01
+        },
+        {
+          "model": "qwen3-8-27b",
+          "type": "price_input",
+          "from": 0.035,
+          "to": 0.06
+        },
+        {
+          "model": "qwen3-8-27b",
+          "type": "price_output",
+          "from": 1.5,
+          "to": 1.96
+        },
+        {
+          "model": "qwen3-8-27b",
+          "type": "price_cached_input",
+          "from": 0.0175,
+          "to": 0.059
+        },
+        {
+          "model": "qwen3-8-27b",
+          "type": "max_output",
+          "from": 131072,
+          "to": 235929
+        },
+        {
+          "model": "step-3-7-flash",
+          "type": "context_window",
+          "from": 262144,
+          "to": 256000
         }
       ]
     }
