@@ -1,9 +1,9 @@
 {
   "meta": {
-    "entries": 63,
+    "entries": 64,
     "first": "2026-10-08",
-    "latest": "2026-11-26T1650Z",
-    "total_changes": 2213
+    "latest": "2026-11-27T1637Z",
+    "total_changes": 2260
   },
   "entries": [
     {
@@ -14060,6 +14060,296 @@
           "type": "max_output",
           "from": 131072,
           "to": 235929
+        }
+      ]
+    },
+    {
+      "from": "2026-11-26T1650Z",
+      "to": "2026-11-27T1637Z",
+      "detected_at": "2026-11-27T16:37:00Z",
+      "count": 47,
+      "changes": [
+        {
+          "model": "kimi-k2-0905",
+          "type": "added",
+          "from": null,
+          "to": "Kimi K2 0905"
+        },
+        {
+          "model": "ling-3-2-flash",
+          "type": "added",
+          "from": null,
+          "to": "Ling 3.2 Flash"
+        },
+        {
+          "model": "deepseek-flash-latest",
+          "type": "price_input",
+          "from": 0.025,
+          "to": 0.036
+        },
+        {
+          "model": "deepseek-flash-latest",
+          "type": "price_output",
+          "from": 0.25,
+          "to": 0.5
+        },
+        {
+          "model": "deepseek-flash-latest",
+          "type": "price_cached_input",
+          "from": 0.0015,
+          "to": 0.01
+        },
+        {
+          "model": "deepseek-pro-latest",
+          "type": "price_input",
+          "from": 0.111,
+          "to": 0.0999
+        },
+        {
+          "model": "deepseek-pro-latest",
+          "type": "price_output",
+          "from": 4.44,
+          "to": 5.0
+        },
+        {
+          "model": "deepseek-pro-latest",
+          "type": "price_cached_input",
+          "from": 0.097,
+          "to": 0.0999
+        },
+        {
+          "model": "deepseek-pro-latest",
+          "type": "max_output",
+          "from": 943718,
+          "to": 393216
+        },
+        {
+          "model": "deepseek-v4-1-flash-1017",
+          "type": "price_input",
+          "from": 0.025,
+          "to": 0.15
+        },
+        {
+          "model": "deepseek-v4-1-flash-1017",
+          "type": "price_output",
+          "from": 0.25,
+          "to": 0.6
+        },
+        {
+          "model": "deepseek-v4-1-flash-1017",
+          "type": "price_cached_input",
+          "from": 0.0015,
+          "to": 0.003
+        },
+        {
+          "model": "deepseek-v4-1-flash-1017",
+          "type": "max_output",
+          "from": 943718,
+          "to": 393216
+        },
+        {
+          "model": "deepseek-v4-flash-vision-exp",
+          "type": "price_input",
+          "from": 0.44,
+          "to": 0.2156
+        },
+        {
+          "model": "deepseek-v4-flash-vision-exp",
+          "type": "price_output",
+          "from": 1.32,
+          "to": 0.6468
+        },
+        {
+          "model": "deepseek-v4-flash-vision-exp",
+          "type": "price_cached_input",
+          "from": 0.028,
+          "to": 0.00686
+        },
+        {
+          "model": "deepseek-v4-flash-vision-exp",
+          "type": "max_output",
+          "from": 393216,
+          "to": 262144
+        },
+        {
+          "model": "deepseek-v4-pro",
+          "type": "price_input",
+          "from": 0.8012,
+          "to": 0.75557
+        },
+        {
+          "model": "deepseek-v4-pro",
+          "type": "price_output",
+          "from": 1.5593,
+          "to": 1.5007
+        },
+        {
+          "model": "deepseek-v4-pro",
+          "type": "price_cached_input",
+          "from": 0.2,
+          "to": 0.21
+        },
+        {
+          "model": "deepseek-v4-pro-0813",
+          "type": "price_input",
+          "from": 0.111,
+          "to": 0.0999
+        },
+        {
+          "model": "deepseek-v4-pro-0813",
+          "type": "price_output",
+          "from": 4.44,
+          "to": 5.0
+        },
+        {
+          "model": "deepseek-v4-pro-0813",
+          "type": "price_cached_input",
+          "from": 0.097,
+          "to": 0.0999
+        },
+        {
+          "model": "deepseek-v4-pro-0813",
+          "type": "max_output",
+          "from": 943718,
+          "to": 393216
+        },
+        {
+          "model": "gemma-3-27b-it",
+          "type": "price_output",
+          "from": 0.45,
+          "to": 0.16
+        },
+        {
+          "model": "gemma-3-27b-it",
+          "type": "price_cached_input",
+          "from": 0.04,
+          "to": null
+        },
+        {
+          "model": "gemma-3-27b-it",
+          "type": "max_output",
+          "from": 117964,
+          "to": 16384
+        },
+        {
+          "model": "gemma-3-4b-it",
+          "type": "price_input",
+          "from": 0.04,
+          "to": 0.05
+        },
+        {
+          "model": "gemma-3-4b-it",
+          "type": "price_output",
+          "from": 0.05,
+          "to": 0.1
+        },
+        {
+          "model": "gemma-3-4b-it",
+          "type": "price_cached_input",
+          "from": 0.02,
+          "to": null
+        },
+        {
+          "model": "gemma-3-4b-it",
+          "type": "max_output",
+          "from": 117964,
+          "to": 16384
+        },
+        {
+          "model": "glm-4-6",
+          "type": "context_window",
+          "from": 204800,
+          "to": 202752
+        },
+        {
+          "model": "inkling-2-mini",
+          "type": "price_input",
+          "from": 0.075,
+          "to": 0.06
+        },
+        {
+          "model": "inkling-2-mini",
+          "type": "price_output",
+          "from": 0.3,
+          "to": 0.24
+        },
+        {
+          "model": "inkling-2-mini",
+          "type": "price_cached_input",
+          "from": 0.015,
+          "to": 0.012
+        },
+        {
+          "model": "kimi-k2-5",
+          "type": "price_input",
+          "from": 0.5,
+          "to": 0.6
+        },
+        {
+          "model": "kimi-k2-5",
+          "type": "price_output",
+          "from": 2.5,
+          "to": 3.0
+        },
+        {
+          "model": "kimi-k2-5",
+          "type": "price_cached_input",
+          "from": 0.15,
+          "to": null
+        },
+        {
+          "model": "kimi-k2-5",
+          "type": "max_output",
+          "from": 235929,
+          "to": 131072
+        },
+        {
+          "model": "llama-3-3-70b-instruct",
+          "type": "price_input",
+          "from": 0.71,
+          "to": 0.59
+        },
+        {
+          "model": "llama-3-3-70b-instruct",
+          "type": "price_output",
+          "from": 0.71,
+          "to": 0.79
+        },
+        {
+          "model": "llama-3-3-70b-instruct",
+          "type": "price_cached_input",
+          "from": 0.71,
+          "to": 0.295
+        },
+        {
+          "model": "llama-3-3-70b-instruct",
+          "type": "max_output",
+          "from": 115200,
+          "to": 32768
+        },
+        {
+          "model": "muse-glimmer-30b",
+          "type": "price_input",
+          "from": 0.35,
+          "to": 0.3
+        },
+        {
+          "model": "muse-glimmer-30b",
+          "type": "price_output",
+          "from": 1.5,
+          "to": 1.2
+        },
+        {
+          "model": "muse-glimmer-30b",
+          "type": "max_output",
+          "from": 117964,
+          "to": 16384
+        },
+        {
+          "model": "qwen3-8-2-4t-a95b",
+          "type": "context_window",
+          "from": 1048576,
+          "to": 1000000
         }
       ]
     }
